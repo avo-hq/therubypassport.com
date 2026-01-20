@@ -1,1 +1,287 @@
 @import "tailwindcss";
+
+/* Custom Design System Variables */
+:root {
+  --color-deep-blue: #1D2D35;
+  --color-warm-yellow: #FFD84D;
+  --color-ruby-red: #9b1c31;
+  --color-ruby-dark: #7a1627;
+  --color-gold: #d4a54a;
+  --color-soft-gray: #F5F5F5;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-xxl: 120px;
+
+  --content-width: 680px;
+  --wide-content-width: 1200px;
+}
+
+/* Holographic Card Effect */
+.holographic-card {
+  transition: transform 0.15s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.holographic-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: overlay;
+}
+
+/* Rainbow holographic shimmer overlay */
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 215, 0, 0.15) 0%,
+    rgba(255, 255, 255, 0.1) 15%,
+    rgba(255, 0, 128, 0.08) 30%,
+    rgba(0, 255, 255, 0.08) 45%,
+    rgba(255, 215, 0, 0.15) 60%,
+    rgba(255, 255, 255, 0.1) 75%,
+    rgba(255, 0, 128, 0.08) 90%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 8s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Passport image styling */
+.passport-image {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(212, 165, 74, 0.1),
+    inset 0 0 60px rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+/* Section styling */
+.section-alternate {
+  background: var(--color-soft-gray);
+}
+
+/* Step cards */
+.step-card {
+  background: white;
+  border-radius: 12px;
+  padding: var(--space-md);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--color-ruby-red), var(--color-ruby-dark));
+  color: var(--color-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+/* Event badges */
+.event-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  font-weight: 500;
+  color: var(--color-deep-blue);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.event-badge:hover {
+  background: var(--color-ruby-red);
+  color: white;
+  border-color: var(--color-ruby-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(155, 28, 49, 0.3);
+}
+
+/* Status callout */
+.status-callout {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 4px solid var(--color-gold);
+  border-radius: 0 8px 8px 0;
+}
+
+/* CTA Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, var(--color-ruby-red), var(--color-ruby-dark));
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(155, 28, 49, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(155, 28, 49, 0.5);
+}
+
+/* Sponsor logos */
+.sponsor-logo {
+  filter: grayscale(0);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.sponsor-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Navigation */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.nav-link {
+  color: var(--color-deep-blue);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-ruby-red);
+}
+
+.nav-link-active {
+  color: var(--color-ruby-red);
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-ruby-red);
+  border-radius: 1px;
+}
+
+.nav-link-mobile {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--color-deep-blue);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link-mobile:hover {
+  background-color: var(--color-soft-gray);
+  color: var(--color-ruby-red);
+}
+
+.nav-link-mobile.nav-link-active {
+  background-color: rgba(155, 28, 49, 0.1);
+  color: var(--color-ruby-red);
+}
+
+/* Stamp Gallery */
+.stamp-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.stamp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.2);
+}
+
+.stamp-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--color-soft-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stamp-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.stamp-card:hover .stamp-image {
+  transform: scale(1.05);
+}
+
+.stamp-info {
+  padding: 1.25rem;
+}
+
+.stamp-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  margin-bottom: 0.5rem;
+}
+
+.stamp-description {
+  font-size: 0.875rem;
+  color: var(--color-deep-blue);
+  opacity: 0.7;
+  line-height: 1.5;
+}

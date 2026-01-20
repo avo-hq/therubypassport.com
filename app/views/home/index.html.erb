@@ -1,2 +1,186 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% content_for(:title) { "The Ruby Passport — Collect Memories from Ruby Events" } %>
+
+<!-- Hero Section -->
+<section class="min-h-[80vh] flex flex-col items-center justify-center px-6 py-16 bg-gradient-to-b from-slate-50 to-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- Holographic Passport Card -->
+    <div
+      class="mb-12"
+      data-controller="holographic-card"
+      data-action="mouseenter->holographic-card#handleMouseEnter mousemove->holographic-card#handleMouseMove mouseleave->holographic-card#handleMouseLeave"
+    >
+      <div
+        class="holographic-card passport-image relative inline-block cursor-pointer"
+        data-holographic-card-target="card"
+      >
+        <%= image_tag "the-passport.jpg",
+          alt: "The Ruby Passport",
+          class: "w-64 md:w-80 lg:w-96 rounded-lg"
+        %>
+        <div
+          class="holographic-shine rounded-lg"
+          data-holographic-card-target="shine"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+      The Ruby Passport
+    </h1>
+
+    <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+      An in-real-life memorabilia that enables you to collect stamps and memories from the Ruby events you visit.
+    </p>
+
+    <!-- Status Callout -->
+    <div class="status-callout inline-flex items-center gap-3 px-6 py-4 mb-8">
+      <span class="text-2xl">🛠</span>
+      <div class="text-left">
+        <span class="font-semibold text-amber-800">Current status:</span>
+        <span class="text-amber-700">We ordered another batch (1000 pieces) in January.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How to Use Section -->
+<section class="section-alternate py-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
+      How to use your Passport
+    </h2>
+
+    <div class="space-y-6">
+      <!-- Step 1 -->
+      <div class="step-card flex gap-5">
+        <div class="step-number">1</div>
+        <div>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2">Claim your passport</h3>
+          <p class="text-slate-600 leading-relaxed">
+            When you first receive your Passport, scan the QR code or tap the tiny chip on the cover to claim it.
+            You will be directed to <a href="https://rubyevents.org" class="text-[#9b1c31] hover:underline font-medium">rubyevents.org</a> where you can create your account or claim it to your existing one.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card flex gap-5">
+        <div class="step-number">2</div>
+        <div>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2">Fill it with your information</h3>
+          <p class="text-slate-600 leading-relaxed">
+            The next thing you should do is fill your passport with your data (real or not, we won't check).
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card flex gap-5">
+        <div class="step-number">3</div>
+        <div>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2">Add your photo</h3>
+          <p class="text-slate-600 leading-relaxed">
+            The event where you received it might have the required infrastructure to take and print your photo. Go to the embassy booth to do that.
+            They might also not have it, which is fine — organizing an event like that is a time-consuming task and the budget might not have been there.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card flex gap-5">
+        <div class="step-number">4</div>
+        <div>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2">Add the event stamp</h3>
+          <p class="text-slate-600 leading-relaxed">
+            The event might have one or more stamps for you. Get them all! 🙌
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-card flex gap-5">
+        <div class="step-number">5</div>
+        <div>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2">Bring your Ruby Passport to all events</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Every event will have its own stamp and surprises for the Ruby Passport, so you better have it on you.
+            Plus, you might even be able to connect with a few friends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Organizer CTA Section -->
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+      Are you an event organizer?
+    </h2>
+    <p class="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
+      Get everything you need to bring the Ruby Passport experience to your event.
+    </p>
+    <a href="<%= organizer_path %>" class="btn-primary">
+      <span>📂</span>
+      Ruby Passport (organizer's guide)
+    </a>
+  </div>
+</section>
+
+<!-- Participating Events Section -->
+<section class="section-alternate py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
+      Participating Events
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="event-badge">Rails World</span>
+      <span class="event-badge">Friendly.rb</span>
+      <span class="event-badge">Euruko '25</span>
+      <span class="event-badge">Rocky Mountain Ruby</span>
+      <span class="event-badge">SF Ruby</span>
+      <span class="event-badge">Dresden.rb</span>
+      <span class="event-badge">PLRUG</span>
+      <span class="event-badge">KRUG</span>
+      <span class="event-badge">Barcelona.rb</span>
+      <a href="https://www.linkedin.com/feed/update/urn:li:groupPost:15477023-7408164988919599104/" class="event-badge" target="_blank" rel="noopener">Munich Rubyshift</a>
+      <span class="event-badge">RubyZG</span>
+      <span class="event-badge">Hamburg on Ruby</span>
+      <a href="https://rubycon.it/" class="event-badge" target="_blank" rel="noopener">Rubycon Italy</a>
+      <a href="mailto:adrian@adrianthedev.com" class="event-badge bg-[#9b1c31] text-white border-[#9b1c31] hover:bg-[#7a1627]">
+        ✨ Your event here
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Sponsors Section -->
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-lg text-slate-500 mb-8">
+      ✨ Proudly brought to you by
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-12">
+      <a href="https://avohq.io" target="_blank" rel="noopener" class="sponsor-logo text-2xl font-bold text-slate-700 hover:text-[#9b1c31] transition-colors">
+        Avo
+      </a>
+      <span class="text-slate-300">&</span>
+      <a href="https://rubyevents.org" target="_blank" rel="noopener" class="sponsor-logo text-2xl font-bold text-slate-700 hover:text-[#9b1c31] transition-colors">
+        RubyEvents.org
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 px-6 bg-slate-800 text-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-slate-400">
+      Made with ❤️ for the Ruby community
+    </p>
+  </div>
+</footer>
