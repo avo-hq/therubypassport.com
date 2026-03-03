@@ -2,12 +2,12 @@
 
 /* Custom Design System Variables */
 :root {
-  --color-deep-blue: #1D2D35;
-  --color-warm-yellow: #FFD84D;
+  --color-deep-blue: #1d2d35;
+  --color-warm-yellow: #ffd84d;
   --color-ruby-red: #9b1c31;
   --color-ruby-dark: #7a1627;
   --color-gold: #d4a54a;
-  --color-soft-gray: #F5F5F5;
+  --color-soft-gray: #f5f5f5;
 
   --space-xs: 8px;
   --space-sm: 16px;
@@ -39,7 +39,7 @@
 
 /* Rainbow holographic shimmer overlay */
 .holographic-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
@@ -65,7 +65,8 @@
 }
 
 @keyframes shimmer {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -75,7 +76,7 @@
 
 /* Passport image styling */
 .passport-image {
-  box-shadow: 
+  box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(212, 165, 74, 0.1),
     inset 0 0 60px rgba(255, 255, 255, 0.05);
@@ -93,7 +94,9 @@
   border-radius: 12px;
   padding: var(--space-md);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .step-card:hover {
@@ -104,7 +107,11 @@
 .step-number {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--color-ruby-red), var(--color-ruby-dark));
+  background: linear-gradient(
+    135deg,
+    var(--color-ruby-red),
+    var(--color-ruby-dark)
+  );
   color: var(--color-gold);
   border-radius: 50%;
   display: flex;
@@ -150,7 +157,11 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
-  background: linear-gradient(135deg, var(--color-ruby-red), var(--color-ruby-dark));
+  background: linear-gradient(
+    135deg,
+    var(--color-ruby-red),
+    var(--color-ruby-dark)
+  );
   color: white;
   font-weight: 600;
   border-radius: 8px;
@@ -201,7 +212,7 @@
 }
 
 .nav-link-active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
