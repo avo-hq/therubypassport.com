@@ -191,16 +191,6 @@
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="py-8 px-6 bg-slate-800 text-white print:hidden">
-  <div class="max-w-3xl mx-auto text-center">
-    <a href="<%= organizer_path %>" class="text-slate-300 hover:text-white underline mb-4 inline-block">
-      ← Back to Organizer's Guide
-    </a>
-    <p class="text-slate-400">
-      Made with ❤️ for the Ruby community
-    </p>
-  </div>
-</footer>
+<%= render "layouts/footer", back_path: organizer_path, back_label: t("layouts.footer.back_to_organizer"), extra_classes: "py-8", print_hidden: true %>
 
 </div>

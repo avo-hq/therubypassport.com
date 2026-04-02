@@ -5,23 +5,34 @@
       <div class="shrink-0">
         <%= link_to root_path, class: "flex items-center gap-2 text-slate-800 hover:text-[#9b1c31] transition-colors" do %>
           <span class="text-2xl">🛂</span>
-          <span class="font-bold text-xl">Ruby Passport</span>
+          <span class="font-bold text-xl"><%= t("layouts.navigation.brand") %></span>
         <% end %>
       </div>
 
       <!-- Navigation Links -->
       <div class="hidden md:flex items-center gap-8">
-        <%= link_to "Home", root_path, 
-            class: "nav-link #{'nav-link-active' if request.path == root_path}" %>
-        <%= link_to "Organizer's Guide", organizer_path, 
-            class: "nav-link #{'nav-link-active' if request.path == organizer_path}" %>
-        <%= link_to "Stamp Samples", stamp_samples_path, 
-            class: "nav-link #{'nav-link-active' if request.path == stamp_samples_path}" %>
+        <%= link_to t("layouts.navigation.home"), root_path,
+            class: "nav-link #{current_page?(root_path) ? 'nav-link-active' : ''}" %>
+        <%= link_to t("layouts.navigation.organizer_guide"), organizer_path,
+            class: "nav-link #{current_page?(organizer_path) ? 'nav-link-active' : ''}" %>
+        <%= link_to t("layouts.navigation.stamp_samples"), stamp_samples_path,
+            class: "nav-link #{current_page?(stamp_samples_path) ? 'nav-link-active' : ''}" %>
+
+        <% if params.key?(:locale) || controller_name == "home" %>
+          <span class="text-slate-300">|</span>
+          <% if I18n.locale == :en %>
+            <span class="text-slate-800 font-medium text-sm">EN</span>
+            <%= link_to "日本語", url_for(locale: :ja), class: "text-slate-500 hover:text-slate-800 text-sm transition-colors" %>
+          <% else %>
+            <%= link_to "EN", url_for(locale: nil), class: "text-slate-500 hover:text-slate-800 text-sm transition-colors" %>
+            <span class="text-slate-800 font-medium text-sm">日本語</span>
+          <% end %>
+        <% end %>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button 
-        type="button" 
+      <button
+        type="button"
         class="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#9b1c31]"
         data-controller="mobile-menu"
         data-action="click->mobile-menu#toggle"
@@ -34,17 +45,29 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div 
+    <div
       class="hidden md:hidden pb-4 border-t border-slate-200"
       data-mobile-menu-target="menu"
     >
       <div class="flex flex-col gap-2 pt-4">
-        <%= link_to "Home", root_path, 
-            class: "nav-link-mobile #{'nav-link-active' if request.path == root_path}" %>
-        <%= link_to "Organizer's Guide", organizer_path, 
-            class: "nav-link-mobile #{'nav-link-active' if request.path == organizer_path}" %>
-        <%= link_to "Stamp Samples", stamp_samples_path, 
-            class: "nav-link-mobile #{'nav-link-active' if request.path == stamp_samples_path}" %>
+        <%= link_to t("layouts.navigation.home"), root_path,
+            class: "nav-link-mobile #{current_page?(root_path) ? 'nav-link-active' : ''}" %>
+        <%= link_to t("layouts.navigation.organizer_guide"), organizer_path,
+            class: "nav-link-mobile #{current_page?(organizer_path) ? 'nav-link-active' : ''}" %>
+        <%= link_to t("layouts.navigation.stamp_samples"), stamp_samples_path,
+            class: "nav-link-mobile #{current_page?(stamp_samples_path) ? 'nav-link-active' : ''}" %>
+
+        <% if params.key?(:locale) || controller_name == "home" %>
+          <div class="flex items-center gap-2 px-3 pt-2 border-t border-slate-200 mt-2">
+            <% if I18n.locale == :en %>
+              <span class="text-slate-800 font-medium text-sm">EN</span>
+              <%= link_to "日本語", url_for(locale: :ja), class: "text-slate-500 hover:text-slate-800 text-sm transition-colors" %>
+            <% else %>
+              <%= link_to "EN", url_for(locale: nil), class: "text-slate-500 hover:text-slate-800 text-sm transition-colors" %>
+              <span class="text-slate-800 font-medium text-sm">日本語</span>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
