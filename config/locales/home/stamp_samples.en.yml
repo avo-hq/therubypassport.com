@@ -1,0 +1,96 @@
+en:
+  home:
+    stamp_samples:
+      title: "Stamp Samples — Ruby Passport"
+      heading: "Stamp Samples"
+      subtitle: "Get inspired by stamps from Ruby events around the world. These examples show the creativity and variety possible with event stamps."
+      stamps:
+        ruby_30:
+          alt: "Ruby 30 stamp"
+          title: "Ruby 30"
+          description: "Classic circular design with Ruby logo"
+        paris_rb:
+          alt: "Paris.rb stamp"
+          title: "Paris.rb"
+          description: "Elegant design with event branding"
+        munich_rubyshift:
+          alt: "Munich Rubyshift stamp"
+          title: "Munich Rubyshift"
+          description: "Bold design with event name"
+        hamburg_on_ruby:
+          alt: "Hamburg on Ruby stamp"
+          title: "Hamburg on Ruby"
+          description: "Clean design with location emphasis"
+        plrug:
+          alt: "PLRUG stamp"
+          title: "PLRUG"
+          description: "Polish Ruby User Group stamp"
+        event_stamp:
+          alt: "Event stamp example"
+          title: "Event Stamp"
+          description: "Example of a custom event stamp"
+        stamping_in_action:
+          alt: "Stamping example"
+          title: "Stamping in Action"
+          description: "Real-world stamping example"
+        custom_design:
+          alt: "Custom stamp design"
+          title: "Custom Design"
+          description: "Creative stamp design example"
+        compact_design:
+          alt: "Small stamp example"
+          title: "Compact Design"
+          description: "Smaller format stamp example"
+        stamping_setup:
+          alt: "Event stamping setup"
+          title: "Stamping Setup"
+          description: "Tabletop setup ready for Ruby Passport stamping."
+        stamped_page:
+          alt: "Stamped Ruby Passport page"
+          title: "Stamped Page"
+          description: "Ruby Passport page filled with event stamps."
+        stamp_closeup:
+          alt: "Close-up of stamp impression"
+          title: "Stamp Close-up"
+          description: "Detailed view of a crisp stamp impression."
+        happy_attendees:
+          alt: "Attendees with Ruby Passports"
+          title: "Happy Attendees"
+          description: "Attendees showing off their stamped Ruby Passports."
+        stamp_in_motion:
+          alt: "Stamp in motion video"
+          title: "Stamp in Motion"
+          description: "Short clip showing a Ruby Passport stamp in use."
+        stamping_demo:
+          alt: "Stamping demo video"
+          title: "Stamping Demo"
+          description: "Demonstration of the stamping process at an event."
+        closeup_stamp:
+          alt: "Close-up stamp video"
+          title: "Close-up Stamp"
+          description: "Close-up view of a Ruby-themed stamp impression."
+        stamping_table:
+          alt: "Stamping table video"
+          title: "Stamping Table"
+          description: "Stamping station setup at a Ruby event."
+        passport_in_use:
+          alt: "Passport in use video"
+          title: "Passport in Use"
+          description: "Attendees getting their Ruby Passport stamped."
+        stamping_flow:
+          alt: "Stamping flow video"
+          title: "Stamping Flow"
+          description: "Smooth stamping flow during a conference break."
+      inspiration:
+        heading: "Get Creative with Your Stamp"
+        description: "These examples show the variety of designs possible. Your stamp can be simple or elaborate, colorful or monochrome, round or custom-shaped. The only limit is your imagination!"
+        design_tips_heading: "Design Tips:"
+        tip_event_name: "Include your event name and year"
+        tip_logo: "Add your logo or a Ruby-themed icon"
+        tip_dual_color: "Consider dual-color designs for visual impact"
+        tip_unique: "Make it unique to your event's personality"
+        tip_test: "Test the stamp on paper before the event"
+        organizer_guide: "View Organizer's Guide"
+      footer:
+        back_to_home: "← Back to home"
+        made_with_love: "Made with ❤️ for the Ruby community"

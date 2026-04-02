@@ -1,4 +1,4 @@
-<% content_for(:title) { "Ruby Passport — Organizer's Guide" } %>
+<% content_for(:title) { t('.title') } %>
 
 <!-- Hero Section -->
 <section class="min-h-[60vh] flex flex-col items-center justify-center px-6 py-16 bg-gradient-to-b from-slate-50 to-white">
@@ -6,30 +6,28 @@
     <div class="mb-8">
       <span class="text-6xl">🗂️</span>
     </div>
-    
+
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-      Ruby Passport<br>
-      <span class="text-3xl md:text-4xl text-slate-600 font-normal">Organizer's Guide</span>
+      <%= t('.hero.heading') %><br>
+      <span class="text-3xl md:text-4xl text-slate-600 font-normal"><%= t('.hero.subheading') %></span>
     </h1>
 
     <div class="status-callout inline-flex items-center gap-3 px-6 py-4 mb-8">
       <span class="text-2xl">🛠</span>
       <div class="text-left">
-        <span class="font-semibold text-amber-800">This is a guide for conference organizers.</span>
+        <span class="font-semibold text-amber-800"><%= t('.hero.callout') %></span>
       </div>
     </div>
 
     <!-- Quick Navigation -->
     <nav class="flex flex-wrap justify-center gap-3 text-sm mb-8">
-      <a href="#tldr" class="text-[#9b1c31] hover:underline font-medium">TL;DR</a>
+      <a href="#tldr" class="text-[#9b1c31] hover:underline font-medium"><%= t('.hero.nav_tldr') %></a>
       <span class="text-slate-300">•</span>
-      <a href="#faq" class="text-[#9b1c31] hover:underline font-medium">FAQ</a>
+      <a href="#faq" class="text-[#9b1c31] hover:underline font-medium"><%= t('.hero.nav_faq') %></a>
       <span class="text-slate-300">•</span>
-      <a href="#what-to-do" class="text-[#9b1c31] hover:underline font-medium">What to do</a>
+      <a href="#what-to-do" class="text-[#9b1c31] hover:underline font-medium"><%= t('.hero.nav_what_to_do') %></a>
       <span class="text-slate-300">•</span>
-      <a href="#how-to-get" class="text-[#9b1c31] hover:underline font-medium">How to get Passports</a>
-      <span class="text-slate-300">•</span>
-      <a href="<%= organizer_checklist_path %>" class="text-[#9b1c31] hover:underline font-medium">Event Day Checklist</a>
+      <a href="#how-to-get" class="text-[#9b1c31] hover:underline font-medium"><%= t('.hero.nav_how_to_get') %></a>
     </nav>
   </div>
 </section>
@@ -38,19 +36,19 @@
 <section class="py-16 px-6 bg-white">
   <div class="max-w-3xl mx-auto">
     <p class="text-xl text-slate-700 leading-relaxed mb-6">
-      The Ruby Passport is a fun way that event organizers in our space can work together to create an ongoing experience for the Ruby community as they travel from event to event around the world.
-    </p>
-    
-    <p class="text-lg text-slate-600 leading-relaxed mb-6">
-      The idea: a realistic passport where attendees collect stamps from Ruby events they have been to.
+      <%= t('.intro.paragraph_1') %>
     </p>
 
     <p class="text-lg text-slate-600 leading-relaxed mb-6">
-      Adrian from <a href="https://avohq.io" class="text-[#9b1c31] hover:underline font-medium">Avo</a> in collaboration with Amanda Perino, Marco Roth, Adrien Poly and others are the ones making this possible for the community.
+      <%= t('.intro.paragraph_2') %>
+    </p>
+
+    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+      <%= t('.intro.paragraph_3_html') %>
     </p>
 
     <p class="text-lg text-slate-600 leading-relaxed">
-      As a conference organizer you can receive passports to give your guests and prepare a cool booth for them to activate them.
+      <%= t('.intro.paragraph_4') %>
     </p>
   </div>
 </section>
@@ -58,17 +56,17 @@
 <!-- TL;DR Section -->
 <section id="tldr" class="section-alternate py-20 px-6">
   <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8">TL;DR</h2>
-    
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8"><%= t('.tldr.heading') %></h2>
+
     <div class="bg-white rounded-lg p-8 shadow-sm mb-6">
       <p class="text-lg text-slate-700 leading-relaxed mb-4">
-        The Ruby Passport is a very memorable happening you can do at your event.
+        <%= t('.tldr.description') %>
       </p>
-      
+
       <ol class="space-y-3 text-lg text-slate-700 list-decimal list-inside">
-        <li>Make a stamp for your event</li>
-        <li>Give your guests the Passport and tell them to fill it out and claim it</li>
-        <li>Take their headshot photos and add them to the passport</li>
+        <li><%= t('.tldr.step_1') %></li>
+        <li><%= t('.tldr.step_2') %></li>
+        <li><%= t('.tldr.step_3') %></li>
       </ol>
     </div>
   </div>
@@ -77,27 +75,27 @@
 <!-- FAQ Section -->
 <section id="faq" class="py-20 px-6 bg-white">
   <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12">FAQ</h2>
-    
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12"><%= t('.faq.heading') %></h2>
+
     <div class="space-y-8">
       <div>
-        <h3 class="text-xl font-semibold text-slate-800 mb-2">Do we need to pay to get into the program?</h3>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.faq.q1') %></h3>
         <p class="text-slate-600 leading-relaxed">
-          No, the Ruby Passport program is completely free for event organizers.
+          <%= t('.faq.a1') %>
         </p>
       </div>
 
       <div>
-        <h3 class="text-xl font-semibold text-slate-800 mb-2">Do we need to prepare with something?</h3>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.faq.q2') %></h3>
         <p class="text-slate-600 leading-relaxed">
-          The main thing is to have an event stamp made. Everything else is optional but recommended for the best experience.
+          <%= t('.faq.a2') %>
         </p>
       </div>
 
       <div>
-        <h3 class="text-xl font-semibold text-slate-800 mb-2">What do I do with the left-over passports?</h3>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.faq.q3') %></h3>
         <p class="text-slate-600 leading-relaxed">
-          Keep them for your next event or return them to us. We'll work with you to manage inventory.
+          <%= t('.faq.a3') %>
         </p>
       </div>
     </div>
@@ -107,196 +105,180 @@
 <!-- What to do Section -->
 <section id="what-to-do" class="section-alternate py-20 px-6">
   <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8">What to do as a conference organizer?</h2>
-    
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8"><%= t('.what_to_do.heading') %></h2>
+
     <p class="text-xl text-slate-700 leading-relaxed mb-12">
-      You can use the Ruby Passport to create a memorable experience at your event.
+      <%= t('.what_to_do.description') %>
     </p>
 
     <!-- Have an event stamp -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-slate-800 mb-4">Have an event stamp</h3>
-      
+      <h3 class="text-2xl font-bold text-slate-800 mb-4"><%= t('.what_to_do.stamp.heading') %></h3>
+
       <p class="text-lg text-slate-600 leading-relaxed mb-4">
-        This is the bare minimum that you can do — have a stamp made for your event. It can contain the name of the event and your logo/logomark. If your event is a recurring one, you can have a stamp for each year.
+        <%= t('.what_to_do.stamp.paragraph_1') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-4">
-        This will ensure that your guests will leave with a nice, in-real-life artifact from your event.
+        <%= t('.what_to_do.stamp.paragraph_2') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        Also, this is the place where you can go wild. Add text, logo, logomark, make it dual-color, have a date stamp… go wild and impress.
+        <%= t('.what_to_do.stamp.paragraph_3') %>
       </p>
 
       <a href="<%= stamp_samples_path %>" class="inline-flex items-center gap-2 text-[#9b1c31] hover:underline font-medium">
         <span>📋</span>
-        <span>Stamp samples</span>
+        <span><%= t('.what_to_do.stamp.samples_link') %></span>
       </a>
     </div>
 
     <!-- Ensure guests have a passport -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-slate-800 mb-4">Ensure the guests have a passport</h3>
-      
+      <h3 class="text-2xl font-bold text-slate-800 mb-4"><%= t('.what_to_do.ensure_guests.heading') %></h3>
+
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        To get "the best bang for your buck" is to ensure your guests get a passport.
+        <%= t('.what_to_do.ensure_guests.paragraph_1') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        During such events, most folks are in this "wondering" mode, and finding their friends and focusing on other things, so they need some help to get started with the Passport.
+        <%= t('.what_to_do.ensure_guests.paragraph_2') %>
       </p>
 
       <div class="bg-white rounded-lg p-6 shadow-sm mb-4">
-        <h4 class="text-xl font-semibold text-slate-800 mb-3">1. Hand it to them at the reception desk when you hand them the badge</h4>
+        <h4 class="text-xl font-semibold text-slate-800 mb-3"><%= t('.what_to_do.ensure_guests.hand_it_heading') %></h4>
         <p class="text-slate-600 leading-relaxed">
-          … and tell them: "Please claim your passport by scanning the QR code or tapping it with your phone", and "get your stamp on at the next booth/table" and have a separate booth or table where they can get the event stamp.
+          <%= t('.what_to_do.ensure_guests.hand_it_paragraph') %>
         </p>
         <p class="text-slate-600 leading-relaxed mt-3">
-          More on this on the <a href="#embassy" class="text-[#9b1c31] hover:underline font-medium">Embassy section</a>.
+          <%= t('.what_to_do.ensure_guests.hand_it_more_html') %>
         </p>
       </div>
 
       <div class="bg-white rounded-lg p-6 shadow-sm">
-        <h4 class="text-xl font-semibold text-slate-800 mb-3">2. Don't have piles of them laying around</h4>
+        <h4 class="text-xl font-semibold text-slate-800 mb-3"><%= t('.what_to_do.ensure_guests.no_piles_heading') %></h4>
         <p class="text-slate-600 leading-relaxed">
-          This has to be the anti-advice. Leaving piles of them lying around on a table for them to take it.
+          <%= t('.what_to_do.ensure_guests.no_piles_paragraph_1') %>
         </p>
         <p class="text-slate-600 leading-relaxed mt-3">
-          This will ensure that nobody will touch them, and nobody will know what to do with it.
+          <%= t('.what_to_do.ensure_guests.no_piles_paragraph_2') %>
         </p>
       </div>
     </div>
 
     <!-- Have a way for guests to print their photos -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-slate-800 mb-4">Have a way for guests to print their photos</h3>
-      
+      <h3 class="text-2xl font-bold text-slate-800 mb-4"><%= t('.what_to_do.photos.heading') %></h3>
+
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        Another nifty little thing is to have a way for guests to take their photos, print, and stick them on the Passport.
+        <%= t('.what_to_do.photos.paragraph_1') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        This will ensure a better stickiness and a better experience for them.
+        <%= t('.what_to_do.photos.paragraph_2') %>
       </p>
 
       <div class="bg-white rounded-lg p-6 shadow-sm mb-4">
-        <h4 class="text-xl font-semibold text-slate-800 mb-3">Hire a photo booth</h4>
+        <h4 class="text-xl font-semibold text-slate-800 mb-3"><%= t('.what_to_do.photos.booth_heading') %></h4>
         <p class="text-slate-600 leading-relaxed mb-3">
-          The simplest thing you can do is hire a photo booth which you can also brand in your event visuals. It's also the recommended way for events larger than 300 people.
+          <%= t('.what_to_do.photos.booth_paragraph_1') %>
         </p>
         <p class="text-slate-600 leading-relaxed mb-3">
-          The guests would have their photo taken and immediately printed for them. Most photo booths have photo paper with an adhesive back.
+          <%= t('.what_to_do.photos.booth_paragraph_2') %>
         </p>
         <p class="text-slate-600 leading-relaxed">
-          Plus, the photo booth will most likely be there the whole day and your guests will have so much fun using it.
+          <%= t('.what_to_do.photos.booth_paragraph_3') %>
         </p>
       </div>
 
       <div class="bg-white rounded-lg p-6 shadow-sm">
-        <h4 class="text-xl font-semibold text-slate-800 mb-3">Improvise using a camera, stand, and photo printer</h4>
+        <h4 class="text-xl font-semibold text-slate-800 mb-3"><%= t('.what_to_do.photos.improvise_heading') %></h4>
         <p class="text-slate-600 leading-relaxed mb-3">
-          If you have a smaller budget you can improvise by using a camera on a stand or handheld, then transfer the photos to a laptop, tablet, or straight to the printer.
+          <%= t('.what_to_do.photos.improvise_paragraph_1') %>
         </p>
         <p class="text-slate-600 leading-relaxed mb-3">
-          It's a slower process but it will get the job done and will get those smiles going.
+          <%= t('.what_to_do.photos.improvise_paragraph_2') %>
         </p>
         <p class="text-slate-600 leading-relaxed font-medium">
-          PS: Don't forget to have adhesive photo paper or double sided sticky-tape for them to stick it to the Passport.
+          <%= t('.what_to_do.photos.improvise_paragraph_3') %>
         </p>
       </div>
     </div>
 
     <!-- Have a mock Embassy desk -->
     <div id="embassy" class="mb-16">
-      <h3 class="text-2xl font-bold text-slate-800 mb-4">Have a mock "Embassy" desk</h3>
-      
+      <h3 class="text-2xl font-bold text-slate-800 mb-4"><%= t('.what_to_do.embassy.heading') %></h3>
+
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        If you want to impress the crowd, create a special Embassy desk where they can fill in mock forms and have mock government workers "give them a hard time" while they try to get their Passport stamped.
+        <%= t('.what_to_do.embassy.paragraph_1') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        The desk should have signage like "The Ruby Embassy" and "Get your paperwork in order before the next event" or other funny messages.
+        <%= t('.what_to_do.embassy.paragraph_2') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        There, you should have the stamp, photo gear, and plenty of pens and sharpies.
+        <%= t('.what_to_do.embassy.paragraph_3') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed">
-        Each passport has a blank "Date and conference of issue" field. This is where you can leave your mark and on the next page, be the first to place the stamp on their unofficial Ruby document.
+        <%= t('.what_to_do.embassy.paragraph_4') %>
       </p>
     </div>
 
     <!-- Mention the Passport in communications -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-slate-800 mb-4">Mention the Passport in your previous communications</h3>
-      
+      <h3 class="text-2xl font-bold text-slate-800 mb-4"><%= t('.what_to_do.mention_comms.heading') %></h3>
+
       <p class="text-lg text-slate-600 leading-relaxed mb-4">
-        As time goes by, more and more folks will have passports, and it's important not to leave them at home, so make sure you write in your updates (email newsletters, tweets, and other social posts) to bring theirs.
+        <%= t('.what_to_do.mention_comms.paragraph_1') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed">
-        A simple "Oh, chuck your passport in the backpack now so you can collect the stamp at our event" is sufficient.
+        <%= t('.what_to_do.mention_comms.paragraph_2') %>
       </p>
     </div>
 
     <!-- The stamping booth -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-slate-800 mb-4">The stamping booth</h3>
-      
+      <h3 class="text-2xl font-bold text-slate-800 mb-4"><%= t('.what_to_do.stamping_booth.heading') %></h3>
+
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        As previously mentioned in the <a href="#embassy" class="text-[#9b1c31] hover:underline font-medium">Embassy section</a> this is where you help the guests fill in their passports, add your stamp, and send out good vibes.
+        <%= t('.what_to_do.stamping_booth.paragraph_1_html') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-4 font-semibold">
-        Don't forget to have:
+        <%= t('.what_to_do.stamping_booth.checklist_intro') %>
       </p>
 
       <ul class="list-disc list-inside space-y-2 text-lg text-slate-600 ml-4">
-        <li>Pens & sharpies</li>
-        <li>Event stamp</li>
-        <li>Stickers</li>
+        <li><%= t('.what_to_do.stamping_booth.checklist_pens') %></li>
+        <li><%= t('.what_to_do.stamping_booth.checklist_stamp') %></li>
+        <li><%= t('.what_to_do.stamping_booth.checklist_stickers') %></li>
       </ul>
     </div>
 
     <!-- Mention the Passport on stage -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-slate-800 mb-4">Mention the Passport on stage</h3>
-      
+      <h3 class="text-2xl font-bold text-slate-800 mb-4"><%= t('.what_to_do.mention_stage.heading') %></h3>
+
       <p class="text-lg text-slate-600 leading-relaxed mb-6">
-        Another great way to make sure they are properly used is to mention them on stage in the opening when everyone is around.
+        <%= t('.what_to_do.mention_stage.paragraph_1') %>
       </p>
 
       <p class="text-lg text-slate-600 leading-relaxed mb-4 font-semibold">
-        The things they need to know are:
+        <%= t('.what_to_do.mention_stage.things_to_know') %>
       </p>
 
       <ul class="list-disc list-inside space-y-2 text-lg text-slate-600 ml-4 mb-6">
-        <li>each person gets a passport</li>
-        <li>they can get their photo taken and added</li>
-        <li>they can claim it online by scanning the QR code or tapping with their phones</li>
+        <li><%= t('.what_to_do.mention_stage.point_1') %></li>
+        <li><%= t('.what_to_do.mention_stage.point_2') %></li>
+        <li><%= t('.what_to_do.mention_stage.point_3') %></li>
       </ul>
 
       <p class="text-lg text-slate-600 leading-relaxed">
-        If Adrian is at the event, he can do that on stage for two minutes.
+        <%= t('.what_to_do.mention_stage.adrian_note') %>
       </p>
-    </div>
-  </div>
-</section>
-
-<!-- Event Day Checklist CTA -->
-<section class="py-16 px-6 bg-white">
-  <div class="max-w-3xl mx-auto text-center">
-    <div class="bg-gradient-to-br from-slate-50 to-amber-50 rounded-xl p-8 border border-amber-200">
-      <span class="text-4xl mb-4 block">📋</span>
-      <h2 class="text-2xl font-bold text-slate-800 mb-3">Event Day Checklist</h2>
-      <p class="text-lg text-slate-600 mb-6">
-        A printable, interactive checklist covering everything from pre-event prep to day-of tasks, embassy worker instructions, and MC scripts.
-      </p>
-      <a href="<%= organizer_checklist_path %>" class="btn-primary">
-        Open checklist →
-      </a>
     </div>
   </div>
 </section>
@@ -304,13 +286,13 @@
 <!-- How to get Passports Section -->
 <section id="how-to-get" class="py-20 px-6 bg-white">
   <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8">How to get Passports for your event</h2>
-    
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8"><%= t('.how_to_get.heading') %></h2>
+
     <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg p-8 border-l-4 border-amber-400">
       <p class="text-lg text-slate-700 leading-relaxed mb-6">
-        We'll work on making this process more straightforward, but for now send an email to Adrian:
+        <%= t('.how_to_get.description') %>
       </p>
-      
+
       <a href="mailto:adrian@adrianthedev.com" class="inline-flex items-center gap-2 text-xl font-semibold text-[#9b1c31] hover:underline">
         <span>✉️</span>
         <span>adrian@adrianthedev.com</span>

@@ -1,0 +1,42 @@
+en:
+  home:
+    index:
+      title: "The Ruby Passport — Collect Memories from Ruby Events"
+      hero:
+        passport_alt: "The Ruby Passport"
+        heading: "The Ruby Passport"
+        tagline: "An in-real-life memorabilia that enables you to collect stamps and memories from the Ruby events you visit."
+        status_label: "Current status:"
+        status_message: "We ordered another batch (1000 pieces) in January."
+      how_to_use:
+        heading: "How to use your Passport"
+        step1:
+          title: "Claim your passport"
+          description_html: "When you first receive your Passport, scan the QR code or tap the tiny chip on the cover to claim it. You will be directed to <a href=\"https://rubyevents.org\" class=\"text-[#9b1c31] hover:underline font-medium\">rubyevents.org</a> where you can create your account or claim it to your existing one."
+        step2:
+          title: "Fill it with your information"
+          description: "The next thing you should do is fill your passport with your data (real or not, we won't check)."
+        step3:
+          title: "Add your photo"
+          description: "The event where you received it might have the required infrastructure to take and print your photo. Go to the embassy booth to do that. They might also not have it, which is fine — organizing an event like that is a time-consuming task and the budget might not have been there."
+        step4:
+          title: "Add the event stamp"
+          description: "The event might have one or more stamps for you. Get them all! 🙌"
+        step5:
+          title: "Bring your Ruby Passport to all events"
+          description: "Every event will have its own stamp and surprises for the Ruby Passport, so you better have it on you. Plus, you might even be able to connect with a few friends."
+      organizer:
+        heading: "Are you an event organizer?"
+        description: "Get everything you need to bring the Ruby Passport experience to your event."
+        cta: "Ruby Passport (organizer's guide)"
+      events:
+        heading: "Participating Events"
+        your_event: "✨ Your event here"
+      sponsors:
+        brought_to_you: "✨ Proudly brought to you by"
+        avo_alt: "Avo"
+        avo_title: "The Ruby on Rails framework for building powerful admin interfaces"
+        ruby_events_alt: "RubyEvents.org"
+        ruby_events_title: "On a mission to index all Ruby events"
+      footer:
+        made_with_love: "Made with ❤️ for the Ruby community"

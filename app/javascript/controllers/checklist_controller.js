@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static targets = ["item", "progress", "progressBar", "progressText"]
+  static values = { progressTemplate: String }
 
   connect() {
     this.storageKey = "ruby-passport-checklist"
@@ -64,7 +65,9 @@ export default class extends Controller {
       this.progressBarTarget.style.width = `${percent}%`
     }
     if (this.hasProgressTextTarget) {
-      this.progressTextTarget.textContent = `${checked} of ${total} completed`
+      this.progressTextTarget.textContent = this.progressTemplateValue
+        .replace('%{checked}', checked)
+        .replace('%{total}', total)
     }
   }
 }

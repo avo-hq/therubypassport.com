@@ -1,4 +1,4 @@
-<% content_for(:title) { "Stamp Samples — Ruby Passport" } %>
+<% content_for(:title) { t('.title') } %>
 
 <!-- Hero Section -->
 <section class="min-h-[50vh] flex flex-col items-center justify-center px-6 py-16 bg-gradient-to-b from-slate-50 to-white">
@@ -8,11 +8,11 @@
     </div>
 
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-      Stamp Samples
+      <%= t('.heading') %>
     </h1>
 
     <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-      Get inspired by stamps from Ruby events around the world. These examples show the creativity and variety possible with event stamps.
+      <%= t('.subtitle') %>
     </p>
   </div>
 </section>
@@ -27,14 +27,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/ruby-30-stamp.jpg" %>"
-            alt="Ruby 30 stamp"
+            alt="<%= t('.stamps.ruby_30.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Ruby 30</h3>
-          <p class="stamp-description">Classic circular design with Ruby logo</p>
+          <h3 class="stamp-title"><%= t('.stamps.ruby_30.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.ruby_30.description') %></p>
         </div>
       </div>
 
@@ -43,14 +43,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/Paris-rb-stamp.avif" %>"
-            alt="Paris.rb stamp"
+            alt="<%= t('.stamps.paris_rb.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Paris.rb</h3>
-          <p class="stamp-description">Elegant design with event branding</p>
+          <h3 class="stamp-title"><%= t('.stamps.paris_rb.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.paris_rb.description') %></p>
         </div>
       </div>
 
@@ -59,14 +59,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/munich-rubyshift.jpg" %>"
-            alt="Munich Rubyshift stamp"
+            alt="<%= t('.stamps.munich_rubyshift.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Munich Rubyshift</h3>
-          <p class="stamp-description">Bold design with event name</p>
+          <h3 class="stamp-title"><%= t('.stamps.munich_rubyshift.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.munich_rubyshift.description') %></p>
         </div>
       </div>
 
@@ -75,14 +75,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/hamburg-rb-stamp.png" %>"
-            alt="Hamburg on Ruby stamp"
+            alt="<%= t('.stamps.hamburg_on_ruby.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Hamburg on Ruby</h3>
-          <p class="stamp-description">Clean design with location emphasis</p>
+          <h3 class="stamp-title"><%= t('.stamps.hamburg_on_ruby.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.hamburg_on_ruby.description') %></p>
         </div>
       </div>
 
@@ -91,14 +91,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/plrug_stamp_photo.png" %>"
-            alt="PLRUG stamp"
+            alt="<%= t('.stamps.plrug.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">PLRUG</h3>
-          <p class="stamp-description">Polish Ruby User Group stamp</p>
+          <h3 class="stamp-title"><%= t('.stamps.plrug.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.plrug.description') %></p>
         </div>
       </div>
 
@@ -107,14 +107,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/IMG_3722.jpeg" %>"
-            alt="Event stamp example"
+            alt="<%= t('.stamps.event_stamp.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Event Stamp</h3>
-          <p class="stamp-description">Example of a custom event stamp</p>
+          <h3 class="stamp-title"><%= t('.stamps.event_stamp.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.event_stamp.description') %></p>
         </div>
       </div>
 
@@ -123,14 +123,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/kaja_stamping.jpeg" %>"
-            alt="Stamping example"
+            alt="<%= t('.stamps.stamping_in_action.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamping in Action</h3>
-          <p class="stamp-description">Real-world stamping example</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamping_in_action.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamping_in_action.description') %></p>
         </div>
       </div>
 
@@ -139,14 +139,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/image.png" %>"
-            alt="Custom stamp design"
+            alt="<%= t('.stamps.custom_design.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Custom Design</h3>
-          <p class="stamp-description">Creative stamp design example</p>
+          <h3 class="stamp-title"><%= t('.stamps.custom_design.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.custom_design.description') %></p>
         </div>
       </div>
 
@@ -155,14 +155,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/8ffd92a9-6e5b-4b4d-8dd3-761fe495b980.jpeg" %>"
-            alt="Small stamp example"
+            alt="<%= t('.stamps.compact_design.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Compact Design</h3>
-          <p class="stamp-description">Smaller format stamp example</p>
+          <h3 class="stamp-title"><%= t('.stamps.compact_design.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.compact_design.description') %></p>
         </div>
       </div>
 
@@ -171,14 +171,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/vienna.rb.jpg" %>"
-            alt="Event stamping setup"
+            alt="<%= t('.stamps.stamping_setup.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamping Setup</h3>
-          <p class="stamp-description">Tabletop setup ready for Ruby Passport stamping.</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamping_setup.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamping_setup.description') %></p>
         </div>
       </div>
 
@@ -187,14 +187,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/IMG_2739.jpeg" %>"
-            alt="Stamped Ruby Passport page"
+            alt="<%= t('.stamps.stamped_page.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamped Page</h3>
-          <p class="stamp-description">Ruby Passport page filled with event stamps.</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamped_page.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamped_page.description') %></p>
         </div>
       </div>
 
@@ -203,14 +203,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/IMG_2740.jpeg" %>"
-            alt="Close-up of stamp impression"
+            alt="<%= t('.stamps.stamp_closeup.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamp Close-up</h3>
-          <p class="stamp-description">Detailed view of a crisp stamp impression.</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamp_closeup.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamp_closeup.description') %></p>
         </div>
       </div>
 
@@ -219,14 +219,14 @@
         <div class="stamp-image-wrapper">
           <img
             src="<%= asset_path "samples/IMG_2741.jpeg" %>"
-            alt="Attendees with Ruby Passports"
+            alt="<%= t('.stamps.happy_attendees.alt') %>"
             class="stamp-image"
             loading="lazy"
           >
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Happy Attendees</h3>
-          <p class="stamp-description">Attendees showing off their stamped Ruby Passports.</p>
+          <h3 class="stamp-title"><%= t('.stamps.happy_attendees.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.happy_attendees.description') %></p>
         </div>
       </div>
 
@@ -243,8 +243,8 @@
           ></video>
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamp in Motion</h3>
-          <p class="stamp-description">Short clip showing a Ruby Passport stamp in use.</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamp_in_motion.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamp_in_motion.description') %></p>
         </div>
       </div>
 
@@ -261,8 +261,8 @@
           ></video>
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamping Demo</h3>
-          <p class="stamp-description">Demonstration of the stamping process at an event.</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamping_demo.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamping_demo.description') %></p>
         </div>
       </div>
 
@@ -279,8 +279,8 @@
           ></video>
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Close-up Stamp</h3>
-          <p class="stamp-description">Close-up view of a Ruby-themed stamp impression.</p>
+          <h3 class="stamp-title"><%= t('.stamps.closeup_stamp.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.closeup_stamp.description') %></p>
         </div>
       </div>
 
@@ -297,8 +297,8 @@
           ></video>
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamping Table</h3>
-          <p class="stamp-description">Stamping station setup at a Ruby event.</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamping_table.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamping_table.description') %></p>
         </div>
       </div>
 
@@ -315,8 +315,8 @@
           ></video>
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Passport in Use</h3>
-          <p class="stamp-description">Attendees getting their Ruby Passport stamped.</p>
+          <h3 class="stamp-title"><%= t('.stamps.passport_in_use.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.passport_in_use.description') %></p>
         </div>
       </div>
 
@@ -333,8 +333,8 @@
           ></video>
         </div>
         <div class="stamp-info">
-          <h3 class="stamp-title">Stamping Flow</h3>
-          <p class="stamp-description">Smooth stamping flow during a conference break.</p>
+          <h3 class="stamp-title"><%= t('.stamps.stamping_flow.title') %></h3>
+          <p class="stamp-description"><%= t('.stamps.stamping_flow.description') %></p>
         </div>
       </div>
 
@@ -346,35 +346,35 @@
 <section class="section-alternate py-20 px-6">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-      Get Creative with Your Stamp
+      <%= t('.inspiration.heading') %>
     </h2>
 
     <p class="text-lg text-slate-600 leading-relaxed mb-8">
-      These examples show the variety of designs possible. Your stamp can be simple or elaborate, colorful or monochrome, round or custom-shaped. The only limit is your imagination!
+      <%= t('.inspiration.description') %>
     </p>
 
     <div class="bg-white rounded-lg p-8 shadow-sm text-left">
-      <h3 class="text-xl font-semibold text-slate-800 mb-4">Design Tips:</h3>
+      <h3 class="text-xl font-semibold text-slate-800 mb-4"><%= t('.inspiration.design_tips_heading') %></h3>
       <ul class="space-y-3 text-slate-600">
         <li class="flex items-start gap-3">
           <span class="text-[#9b1c31] font-bold">•</span>
-          <span>Include your event name and year</span>
+          <span><%= t('.inspiration.tip_event_name') %></span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-[#9b1c31] font-bold">•</span>
-          <span>Add your logo or a Ruby-themed icon</span>
+          <span><%= t('.inspiration.tip_logo') %></span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-[#9b1c31] font-bold">•</span>
-          <span>Consider dual-color designs for visual impact</span>
+          <span><%= t('.inspiration.tip_dual_color') %></span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-[#9b1c31] font-bold">•</span>
-          <span>Make it unique to your event's personality</span>
+          <span><%= t('.inspiration.tip_unique') %></span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-[#9b1c31] font-bold">•</span>
-          <span>Test the stamp on paper before the event</span>
+          <span><%= t('.inspiration.tip_test') %></span>
         </li>
       </ul>
     </div>
@@ -382,7 +382,7 @@
     <div class="mt-12">
       <a href="<%= organizer_path %>" class="btn-primary">
         <span>📂</span>
-        <span>View Organizer's Guide</span>
+        <span><%= t('.inspiration.organizer_guide') %></span>
       </a>
     </div>
   </div>
