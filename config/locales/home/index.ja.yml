@@ -7,12 +7,12 @@ ja:
         heading: "The Ruby Passport"
         tagline: "参加したRubyイベントのスタンプや思い出を集められる、リアルなメモラビリアです。"
         status_label: "現在の状況："
-        status_message: "1月に追加のバッチ（1000部）を発注しました。"
+        status_message: "最新のバッチが届き、注文総数は5000部を超えました。"
       how_to_use:
         heading: "パスポートの使い方"
         step1:
           title: "パスポートを受け取る"
-          description_html: "パスポートを受け取ったら、QRコードをスキャンするか、表紙の小さなチップをタップして登録してください。<a href=\"https://rubyevents.org\" class=\"text-[#9b1c31] hover:underline font-medium\">rubyevents.org</a>に移動し、アカウントを作成するか、既存のアカウントに紐づけることができます。"
+          description_html: 'パスポートを受け取ったら、QRコードをスキャンするか、表紙の小さなチップをタップして登録してください。<a href="https://rubyevents.org" class="text-[#9b1c31] hover:underline font-medium">rubyevents.org</a>に移動し、アカウントを作成するか、既存のアカウントに紐づけることができます。'
         step2:
           title: "情報を記入する"
           description: "次に、パスポートにあなたの情報を記入しましょう（本名でもニックネームでも構いません、確認はしません）。"

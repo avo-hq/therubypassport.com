@@ -7,12 +7,12 @@ en:
         heading: "The Ruby Passport"
         tagline: "An in-real-life memorabilia that enables you to collect stamps and memories from the Ruby events you visit."
         status_label: "Current status:"
-        status_message: "We ordered another batch (1000 pieces) in January."
+        status_message: "Just received the latest batch totaling over 5000 ordered Passports."
       how_to_use:
         heading: "How to use your Passport"
         step1:
           title: "Claim your passport"
-          description_html: "When you first receive your Passport, scan the QR code or tap the tiny chip on the cover to claim it. You will be directed to <a href=\"https://rubyevents.org\" class=\"text-[#9b1c31] hover:underline font-medium\">rubyevents.org</a> where you can create your account or claim it to your existing one."
+          description_html: 'When you first receive your Passport, scan the QR code or tap the tiny chip on the cover to claim it. You will be directed to <a href="https://rubyevents.org" class="text-[#9b1c31] hover:underline font-medium">rubyevents.org</a> where you can create your account or claim it to your existing one.'
         step2:
           title: "Fill it with your information"
           description: "The next thing you should do is fill your passport with your data (real or not, we won't check)."
