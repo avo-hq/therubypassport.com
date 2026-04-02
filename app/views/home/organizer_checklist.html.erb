@@ -1,0 +1,188 @@
+<% content_for(:title) { t('.title') } %>
+
+<div data-controller="checklist" data-checklist-progress-template-value="<%= t('.progress_template') %>">
+
+<!-- Hero Section -->
+<section class="py-16 px-6 bg-gradient-to-b from-slate-50 to-white print:py-6 print:bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="mb-6 print:hidden">
+      <span class="text-5xl">📋</span>
+    </div>
+
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 leading-tight print:text-3xl">
+      <%= t('.heading') %>
+    </h1>
+    <p class="text-lg text-slate-600 mb-8 print:mb-4">
+      <%= t('.subtitle') %>
+    </p>
+
+    <!-- Progress Bar -->
+    <div class="max-w-md mx-auto mb-6 print:hidden">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-sm font-medium text-slate-600"><%= t('.progress_label') %></span>
+        <span class="text-sm font-medium text-slate-600" data-checklist-target="progressText"><%= t('.progress_template', checked: 0, total: 0) %></span>
+      </div>
+      <div class="w-full bg-slate-200 rounded-full h-3">
+        <div class="bg-gradient-to-r from-[#9b1c31] to-[#7a1627] h-3 rounded-full transition-all duration-300" style="width: 0%" data-checklist-target="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 print:hidden">
+      <button data-action="checklist#print" class="btn-primary cursor-pointer">
+        <span>🖨</span> <%= t('.print_checklist') %>
+      </button>
+      <button data-action="checklist#resetAll" class="inline-flex items-center gap-2 px-5 py-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-all cursor-pointer">
+        <span>↺</span> <%= t('.reset_all') %>
+      </button>
+      <a href="<%= organizer_path %>" class="inline-flex items-center gap-2 px-5 py-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-all">
+        <%= t('.back_to_guide') %>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Pre-Event Section -->
+<section class="section-alternate py-12 px-6 print:py-6 print:bg-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2"><%= t('.before_event.heading') %></h2>
+    <p class="text-slate-500 mb-6 print:mb-4"><%= t('.before_event.description') %></p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "pre-newsletter", label: t('.checklist.pre_newsletter') %>
+      <%= render "checklist_item", key: "pre-stamp", label: t('.checklist.pre_stamp') %>
+      <%= render "checklist_item", key: "pre-passports", label: t('.checklist.pre_passports') %>
+      <%= render "checklist_item", key: "pre-embassy-signage", label: t('.checklist.pre_embassy_signage') %>
+      <%= render "checklist_item", key: "pre-photo-gear", label: t('.checklist.pre_photo_gear') %>
+      <%= render "checklist_item", key: "pre-supplies", label: t('.checklist.pre_supplies') %>
+      <%= render "checklist_item", key: "pre-personnel", label: t('.checklist.pre_personnel') %>
+      <%= render "checklist_item", key: "pre-scanner-app", label: t('.checklist.pre_scanner_app') %>
+      <%= render "checklist_item", key: "pre-mc-script", label: t('.checklist.pre_mc_script') %>
+    </div>
+  </div>
+</section>
+
+<!-- Event Morning Section -->
+<section class="py-12 px-6 bg-white print:py-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2"><%= t('.event_morning.heading') %></h2>
+    <p class="text-slate-500 mb-6 print:mb-4"><%= t('.event_morning.description') %></p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "morning-desk", label: t('.checklist.morning_desk') %>
+      <%= render "checklist_item", key: "morning-photo", label: t('.checklist.morning_photo') %>
+      <%= render "checklist_item", key: "morning-passports-reception", label: t('.checklist.morning_passports_reception') %>
+      <%= render "checklist_item", key: "morning-brief-reception", label: t('.checklist.morning_brief_reception') %>
+      <%= render "checklist_item", key: "morning-brief-embassy", label: t('.checklist.morning_brief_embassy') %>
+      <%= render "checklist_item", key: "morning-scanner-test", label: t('.checklist.morning_scanner_test') %>
+      <%= render "checklist_item", key: "morning-ink", label: t('.checklist.morning_ink') %>
+    </div>
+  </div>
+</section>
+
+<!-- During the Event Section -->
+<section class="section-alternate py-12 px-6 print:py-6 print:bg-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2"><%= t('.during_event.heading') %></h2>
+    <p class="text-slate-500 mb-6 print:mb-4"><%= t('.during_event.description') %></p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "during-announce", label: t('.checklist.during_announce') %>
+      <%= render "checklist_item", key: "during-announce-location", label: t('.checklist.during_announce_location') %>
+      <%= render "checklist_item", key: "during-announce-what", label: t('.checklist.during_announce_what') %>
+      <%= render "checklist_item", key: "during-embassy-staffed", label: t('.checklist.during_embassy_staffed') %>
+      <%= render "checklist_item", key: "during-scanning", label: t('.checklist.during_scanning') %>
+      <%= render "checklist_item", key: "during-stamping", label: t('.checklist.during_stamping') %>
+      <%= render "checklist_item", key: "during-photos", label: t('.checklist.during_photos') %>
+      <%= render "checklist_item", key: "during-help", label: t('.checklist.during_help') %>
+    </div>
+  </div>
+</section>
+
+<!-- After the Event Section -->
+<section class="py-12 px-6 bg-white print:py-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2"><%= t('.after_event.heading') %></h2>
+    <p class="text-slate-500 mb-6 print:mb-4"><%= t('.after_event.description') %></p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "after-collect", label: t('.checklist.after_collect') %>
+      <%= render "checklist_item", key: "after-count", label: t('.checklist.after_count') %>
+      <%= render "checklist_item", key: "after-contact", label: t('.checklist.after_contact') %>
+    </div>
+  </div>
+</section>
+
+<!-- Embassy Worker Quick Reference -->
+<section class="section-alternate py-12 px-6 print:py-6 print:bg-white print:break-before-page">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2"><%= t('.embassy_reference.heading') %></h2>
+    <p class="text-slate-500 mb-6 print:mb-4"><%= t('.embassy_reference.description') %></p>
+
+    <div class="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#9b1c31] print:shadow-none print:border print:border-slate-300">
+      <h3 class="text-xl font-semibold text-slate-800 mb-4"><%= t('.embassy_reference.role_heading') %></h3>
+
+      <p class="text-slate-600 mb-4">
+        <%= t('.embassy_reference.role_intro') %>
+      </p>
+
+      <ol class="space-y-4 text-slate-700">
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">1</span>
+          <div>
+            <span class="font-semibold"><%= t('.embassy_reference.step1_title') %></span> <%= t('.embassy_reference.step1_detail') %>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">2</span>
+          <div>
+            <span class="font-semibold"><%= t('.embassy_reference.step2_title') %></span> <%= t('.embassy_reference.step2_detail') %>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">3</span>
+          <div>
+            <span class="font-semibold"><%= t('.embassy_reference.step3_title') %></span> <%= t('.embassy_reference.step3_detail') %>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">4</span>
+          <div>
+            <span class="font-semibold"><%= t('.embassy_reference.step4_title') %></span> <%= t('.embassy_reference.step4_detail') %>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">5</span>
+          <div>
+            <span class="font-semibold"><%= t('.embassy_reference.step5_title') %></span> <%= t('.embassy_reference.step5_detail') %>
+          </div>
+        </li>
+      </ol>
+
+      <div class="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+        <p class="text-amber-800 font-medium mb-2"><%= t('.embassy_reference.scanner_heading') %></p>
+        <p class="text-amber-700 text-sm">
+          <%= t('.embassy_reference.scanner_instructions_html').html_safe %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MC Announcement Script -->
+<section class="py-12 px-6 bg-white print:py-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2"><%= t('.mc_script.heading') %></h2>
+    <p class="text-slate-500 mb-6 print:mb-4"><%= t('.mc_script.description') %></p>
+
+    <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 print:bg-white">
+      <blockquote class="text-lg text-slate-700 leading-relaxed italic">
+        <%= t('.mc_script.script_html').html_safe %>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<%= render "layouts/footer", back_path: organizer_path, back_label: t("layouts.footer.back_to_organizer"), extra_classes: "py-8", print_hidden: true %>
+
+</div>

@@ -12,3 +12,6 @@ application.register("holographic-card", HolographicCardController)
 
 import MobileMenuController from "./mobile_menu_controller"
 application.register("mobile-menu", MobileMenuController)
+
+import ChecklistController from "./checklist_controller"
+application.register("checklist", ChecklistController)

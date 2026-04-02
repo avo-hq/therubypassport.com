@@ -1,0 +1,11 @@
+ja:
+  layouts:
+    navigation:
+      brand: "Ruby Passport"
+      home: "ホーム"
+      organizer_guide: "主催者ガイド"
+      stamp_samples: "スタンプサンプル"
+    footer:
+      made_with_love: "Rubyコミュニティへ ❤️ を込めて"
+      back_to_home: "ホームに戻る"
+      back_to_organizer: "主催者ガイドに戻る"

@@ -1,4 +1,4 @@
-<% content_for(:title) { "The Ruby Passport — Collect Memories from Ruby Events" } %>
+<% content_for(:title) { t('.title') } %>
 
 <!-- Hero Section -->
 <section class="min-h-[80vh] flex flex-col items-center justify-center px-6 py-16 bg-gradient-to-b from-slate-50 to-white">
@@ -14,7 +14,7 @@
         data-holographic-card-target="card"
       >
         <%= image_tag "the-passport.jpg",
-          alt: "The Ruby Passport",
+          alt: t('.hero.passport_alt'),
           class: "w-64 md:w-80 lg:w-96 rounded-lg"
         %>
         <div
@@ -26,19 +26,19 @@
 
     <!-- Headline -->
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-      The Ruby Passport
+      <%= t('.hero.heading') %>
     </h1>
 
     <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-      An in-real-life memorabilia that enables you to collect stamps and memories from the Ruby events you visit.
+      <%= t('.hero.tagline') %>
     </p>
 
     <!-- Status Callout -->
     <div class="status-callout inline-flex items-center gap-3 px-6 py-4 mb-8">
       <span class="text-2xl">🛠</span>
       <div class="text-left">
-        <span class="font-semibold text-amber-800">Current status:</span>
-        <span class="text-amber-700">We ordered another batch (1000 pieces) in January.</span>
+        <span class="font-semibold text-amber-800"><%= t('.hero.status_label') %></span>
+        <span class="text-amber-700"><%= t('.hero.status_message') %></span>
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@
 <section class="section-alternate py-20 px-6">
   <div class="max-w-3xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
-      How to use your Passport
+      <%= t('.how_to_use.heading') %>
     </h2>
 
     <div class="space-y-6">
@@ -56,10 +56,9 @@
       <div class="step-card flex gap-5">
         <div class="step-number">1</div>
         <div>
-          <h3 class="text-xl font-semibold text-slate-800 mb-2">Claim your passport</h3>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.how_to_use.step1.title') %></h3>
           <p class="text-slate-600 leading-relaxed">
-            When you first receive your Passport, scan the QR code or tap the tiny chip on the cover to claim it.
-            You will be directed to <a href="https://rubyevents.org" class="text-[#9b1c31] hover:underline font-medium">rubyevents.org</a> where you can create your account or claim it to your existing one.
+            <%= t('.how_to_use.step1.description_html') %>
           </p>
         </div>
       </div>
@@ -68,9 +67,9 @@
       <div class="step-card flex gap-5">
         <div class="step-number">2</div>
         <div>
-          <h3 class="text-xl font-semibold text-slate-800 mb-2">Fill it with your information</h3>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.how_to_use.step2.title') %></h3>
           <p class="text-slate-600 leading-relaxed">
-            The next thing you should do is fill your passport with your data (real or not, we won't check).
+            <%= t('.how_to_use.step2.description') %>
           </p>
         </div>
       </div>
@@ -79,10 +78,9 @@
       <div class="step-card flex gap-5">
         <div class="step-number">3</div>
         <div>
-          <h3 class="text-xl font-semibold text-slate-800 mb-2">Add your photo</h3>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.how_to_use.step3.title') %></h3>
           <p class="text-slate-600 leading-relaxed">
-            The event where you received it might have the required infrastructure to take and print your photo. Go to the embassy booth to do that.
-            They might also not have it, which is fine — organizing an event like that is a time-consuming task and the budget might not have been there.
+            <%= t('.how_to_use.step3.description') %>
           </p>
         </div>
       </div>
@@ -91,9 +89,9 @@
       <div class="step-card flex gap-5">
         <div class="step-number">4</div>
         <div>
-          <h3 class="text-xl font-semibold text-slate-800 mb-2">Add the event stamp</h3>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.how_to_use.step4.title') %></h3>
           <p class="text-slate-600 leading-relaxed">
-            The event might have one or more stamps for you. Get them all! 🙌
+            <%= t('.how_to_use.step4.description') %>
           </p>
         </div>
       </div>
@@ -102,10 +100,9 @@
       <div class="step-card flex gap-5">
         <div class="step-number">5</div>
         <div>
-          <h3 class="text-xl font-semibold text-slate-800 mb-2">Bring your Ruby Passport to all events</h3>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2"><%= t('.how_to_use.step5.title') %></h3>
           <p class="text-slate-600 leading-relaxed">
-            Every event will have its own stamp and surprises for the Ruby Passport, so you better have it on you.
-            Plus, you might even be able to connect with a few friends.
+            <%= t('.how_to_use.step5.description') %>
           </p>
         </div>
       </div>
@@ -117,14 +114,14 @@
 <section class="py-20 px-6 bg-white">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-      Are you an event organizer?
+      <%= t('.organizer.heading') %>
     </h2>
     <p class="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-      Get everything you need to bring the Ruby Passport experience to your event.
+      <%= t('.organizer.description') %>
     </p>
     <a href="<%= organizer_path %>" class="btn-primary">
       <span>📂</span>
-      Ruby Passport (organizer's guide)
+      <%= t('.organizer.cta') %>
     </a>
   </div>
 </section>
@@ -133,7 +130,7 @@
 <section class="section-alternate py-20 px-6">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
-      Participating Events
+      <%= t('.events.heading') %>
     </h2>
 
     <div class="flex flex-wrap justify-center gap-3">
@@ -151,7 +148,7 @@
       <span class="event-badge">Hamburg on Ruby</span>
       <a href="https://rubycon.it/" class="event-badge" target="_blank" rel="noopener">Rubycon Italy</a>
       <a href="mailto:adrian@adrianthedev.com" class="event-badge bg-[#9b1c31] text-white border-[#9b1c31] hover:bg-[#7a1627]">
-        ✨ Your event here
+        <%= t('.events.your_event') %>
       </a>
     </div>
   </div>
@@ -161,26 +158,19 @@
 <section class="py-20 px-6 bg-white">
   <div class="max-w-3xl mx-auto text-center">
     <p class="text-lg text-slate-500 mb-8">
-      ✨ Proudly brought to you by
+      <%= t('.sponsors.brought_to_you') %>
     </p>
 
     <div class="flex flex-wrap items-center justify-center gap-12">
-      <a href="https://avohq.io" target="_blank" rel="noopener" class="sponsor-logo" title="The Ruby on Rails framework for building powerful admin interfaces">
-        <%= image_tag "avo-logo-colored.png", alt: "Avo", class: "h-12 md:h-18" %>
+      <a href="https://avohq.io" target="_blank" rel="noopener" class="sponsor-logo" title="<%= t('.sponsors.avo_title') %>">
+        <%= image_tag "avo-logo-colored.png", alt: t('.sponsors.avo_alt'), class: "h-12 md:h-18" %>
       </a>
       <span class="text-slate-300">&</span>
-      <a href="https://rubyevents.org" target="_blank" rel="noopener" class="sponsor-logo" title="On a mission to index all Ruby events">
-        <%= image_tag "ruby-events-logo.png", alt: "RubyEvents.org", class: "h-12 md:h-22" %>
+      <a href="https://rubyevents.org" target="_blank" rel="noopener" class="sponsor-logo" title="<%= t('.sponsors.ruby_events_title') %>">
+        <%= image_tag "ruby-events-logo.png", alt: t('.sponsors.ruby_events_alt'), class: "h-12 md:h-22" %>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="py-12 px-6 bg-slate-800 text-white">
-  <div class="max-w-3xl mx-auto text-center">
-    <p class="text-slate-400">
-      Made with ❤️ for the Ruby community
-    </p>
-  </div>
-</footer>
+<%= render "layouts/footer" %>

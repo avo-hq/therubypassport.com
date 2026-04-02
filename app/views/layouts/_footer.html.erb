@@ -1,0 +1,12 @@
+<footer class="<%= local_assigns[:extra_classes] || 'py-12' %> px-6 bg-slate-800 text-white <%= 'print:hidden' if local_assigns[:print_hidden] %>">
+  <div class="max-w-3xl mx-auto text-center">
+    <% if local_assigns[:back_path] %>
+      <a href="<%= back_path %>" class="text-slate-300 hover:text-white underline mb-4 inline-block">
+        ← <%= back_label %>
+      </a>
+    <% end %>
+    <p class="text-slate-400">
+      <%= t("layouts.footer.made_with_love") %>
+    </p>
+  </div>
+</footer>
