@@ -1,0 +1,206 @@
+<% content_for(:title) { "Ruby Passport — Event Day Checklist" } %>
+
+<div data-controller="checklist">
+
+<!-- Hero Section -->
+<section class="py-16 px-6 bg-gradient-to-b from-slate-50 to-white print:py-6 print:bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="mb-6 print:hidden">
+      <span class="text-5xl">📋</span>
+    </div>
+
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 leading-tight print:text-3xl">
+      Event Day Checklist
+    </h1>
+    <p class="text-lg text-slate-600 mb-8 print:mb-4">
+      Everything you need to run the Ruby Passport experience at your event.
+    </p>
+
+    <!-- Progress Bar -->
+    <div class="max-w-md mx-auto mb-6 print:hidden">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-sm font-medium text-slate-600">Progress</span>
+        <span class="text-sm font-medium text-slate-600" data-checklist-target="progressText">0 of 0 completed</span>
+      </div>
+      <div class="w-full bg-slate-200 rounded-full h-3">
+        <div class="bg-gradient-to-r from-[#9b1c31] to-[#7a1627] h-3 rounded-full transition-all duration-300" style="width: 0%" data-checklist-target="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 print:hidden">
+      <button data-action="checklist#print" class="btn-primary cursor-pointer">
+        <span>🖨</span> Print checklist
+      </button>
+      <button data-action="checklist#resetAll" class="inline-flex items-center gap-2 px-5 py-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-all cursor-pointer">
+        <span>↺</span> Reset all
+      </button>
+      <a href="<%= organizer_path %>" class="inline-flex items-center gap-2 px-5 py-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-all">
+        ← Back to guide
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Pre-Event Section -->
+<section class="section-alternate py-12 px-6 print:py-6 print:bg-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2">Before the event</h2>
+    <p class="text-slate-500 mb-6 print:mb-4">Complete these tasks in the days/weeks leading up to the event.</p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "pre-newsletter", label: "Send attendees a newsletter reminder to bring their passports" %>
+      <%= render "checklist_item", key: "pre-stamp", label: "Confirm your event stamp is ready (name, logo, date)" %>
+      <%= render "checklist_item", key: "pre-passports", label: "Receive passports from Adrian (or confirm inventory from previous event)" %>
+      <%= render "checklist_item", key: "pre-embassy-signage", label: "Prepare Embassy desk signage (\"The Ruby Embassy\", fun messages)" %>
+      <%= render "checklist_item", key: "pre-photo-gear", label: "Arrange photo setup (photo booth rental or camera + printer + adhesive paper)" %>
+      <%= render "checklist_item", key: "pre-supplies", label: "Gather supplies: pens, sharpies, stickers, double-sided tape" %>
+      <%= render "checklist_item", key: "pre-personnel", label: "Assign embassy workers / stamping personnel for the day" %>
+      <%= render "checklist_item", key: "pre-scanner-app", label: "Set up passport-scanner app access — ensure personnel have credentials" %>
+      <%= render "checklist_item", key: "pre-mc-script", label: "Add Ruby Passport mention to the MC/intro announcement script" %>
+    </div>
+  </div>
+</section>
+
+<!-- Event Morning Section -->
+<section class="py-12 px-6 bg-white print:py-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2">Event morning setup</h2>
+    <p class="text-slate-500 mb-6 print:mb-4">Get everything in place before doors open.</p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "morning-desk", label: "Set up the Embassy desk with signage, stamp, pens, and stickers" %>
+      <%= render "checklist_item", key: "morning-photo", label: "Set up photo booth / camera station near the Embassy desk" %>
+      <%= render "checklist_item", key: "morning-passports-reception", label: "Place passport stacks at the reception/registration desk (NOT on random tables)" %>
+      <%= render "checklist_item", key: "morning-brief-reception", label: "Brief reception staff: hand passport with badge, say \"Claim yours by scanning the QR code\"" %>
+      <%= render "checklist_item", key: "morning-brief-embassy", label: "Brief embassy workers on the process: stamp, help fill in, scan, take photos" %>
+      <%= render "checklist_item", key: "morning-scanner-test", label: "Test the passport-scanner app on embassy workers' phones" %>
+      <%= render "checklist_item", key: "morning-ink", label: "Test stamp ink pad — make sure it's fresh" %>
+    </div>
+  </div>
+</section>
+
+<!-- During the Event Section -->
+<section class="section-alternate py-12 px-6 print:py-6 print:bg-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2">During the event</h2>
+    <p class="text-slate-500 mb-6 print:mb-4">Keep the passport experience running smoothly.</p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "during-announce", label: "MC mentions the Ruby Passport during intro announcement" %>
+      <%= render "checklist_item", key: "during-announce-location", label: "Announce where the Embassy desk is located" %>
+      <%= render "checklist_item", key: "during-announce-what", label: "Announce what to do: get passport, fill it in, scan QR code, get stamp & photo" %>
+      <%= render "checklist_item", key: "during-embassy-staffed", label: "Ensure Embassy desk is staffed throughout the event" %>
+      <%= render "checklist_item", key: "during-scanning", label: "Embassy workers scanning passports and helping attendees claim theirs" %>
+      <%= render "checklist_item", key: "during-stamping", label: "Stamping passports with the event stamp" %>
+      <%= render "checklist_item", key: "during-photos", label: "Taking and printing headshot photos for attendees" %>
+      <%= render "checklist_item", key: "during-help", label: "Helping attendees fill in their passport details" %>
+    </div>
+  </div>
+</section>
+
+<!-- After the Event Section -->
+<section class="py-12 px-6 bg-white print:py-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2">After the event</h2>
+    <p class="text-slate-500 mb-6 print:mb-4">Wrap up and prepare for next time.</p>
+
+    <div class="space-y-3">
+      <%= render "checklist_item", key: "after-collect", label: "Collect leftover passports and supplies from the Embassy desk" %>
+      <%= render "checklist_item", key: "after-count", label: "Count remaining passport inventory" %>
+      <%= render "checklist_item", key: "after-contact", label: "Contact Adrian about leftover passports (keep for next event or return)" %>
+    </div>
+  </div>
+</section>
+
+<!-- Embassy Worker Quick Reference -->
+<section class="section-alternate py-12 px-6 print:py-6 print:bg-white print:break-before-page">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2">Embassy worker quick reference</h2>
+    <p class="text-slate-500 mb-6 print:mb-4">Hand this section to your embassy personnel.</p>
+
+    <div class="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#9b1c31] print:shadow-none print:border print:border-slate-300">
+      <h3 class="text-xl font-semibold text-slate-800 mb-4">Your role at the Embassy desk</h3>
+
+      <p class="text-slate-600 mb-4">
+        You're the friendly face helping attendees get their Ruby Passport set up. Here's the flow:
+      </p>
+
+      <ol class="space-y-4 text-slate-700">
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">1</span>
+          <div>
+            <span class="font-semibold">Greet them</span> — welcome them to the Ruby Embassy.
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">2</span>
+          <div>
+            <span class="font-semibold">Help them fill it in</span> — name, date of issue, conference name on the first page.
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">3</span>
+          <div>
+            <span class="font-semibold">Stamp it</span> — place the event stamp on the first available stamp page.
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">4</span>
+          <div>
+            <span class="font-semibold">Scan it</span> — use the passport-scanner app on your phone to scan the passport's QR code.
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="step-number shrink-0">5</span>
+          <div>
+            <span class="font-semibold">Photo time</span> — take their headshot, print it, and help them stick it on the passport.
+          </div>
+        </li>
+      </ol>
+
+      <div class="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+        <p class="text-amber-800 font-medium mb-2">Scanner app access</p>
+        <p class="text-amber-700 text-sm">
+          Open <span class="font-mono font-semibold">passport-scanner.avohq.io</span> on your phone.
+          Your organizer will provide the login credentials. Make sure you can log in before the event starts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MC Announcement Script -->
+<section class="py-12 px-6 bg-white print:py-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-slate-800 mb-2">MC announcement script</h2>
+    <p class="text-slate-500 mb-6 print:mb-4">Use this during the opening to let everyone know about the Ruby Passport.</p>
+
+    <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 print:bg-white">
+      <blockquote class="text-lg text-slate-700 leading-relaxed italic">
+        "If you picked up a little burgundy booklet at registration — that's your Ruby Passport!
+        It's a real passport-style booklet where you collect stamps from Ruby events around the world.
+        <br><br>
+        Here's what to do: fill in your name on the first page, then head over to our Embassy desk
+        <span class="font-semibold">[point to location]</span> to get your event stamp, have your photo taken,
+        and scan the QR code to claim it digitally.
+        <br><br>
+        If you already have a passport from a previous event — bring it to the Embassy to collect this event's stamp!"
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 px-6 bg-slate-800 text-white print:hidden">
+  <div class="max-w-3xl mx-auto text-center">
+    <a href="<%= organizer_path %>" class="text-slate-300 hover:text-white underline mb-4 inline-block">
+      ← Back to Organizer's Guide
+    </a>
+    <p class="text-slate-400">
+      Made with ❤️ for the Ruby community
+    </p>
+  </div>
+</footer>
+
+</div>

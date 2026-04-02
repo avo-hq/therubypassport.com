@@ -7,6 +7,9 @@ class HomeController < ApplicationController
   def organizer
   end
 
+  def organizer_checklist
+  end
+
   def stamp_samples
   end
 end

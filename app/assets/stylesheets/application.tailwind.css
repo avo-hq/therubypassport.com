@@ -242,6 +242,28 @@
   color: var(--color-ruby-red);
 }
 
+/* Print styles */
+@media print {
+  .navbar,
+  nav[aria-label] {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
+
 /* Stamp Gallery */
 .stamp-card {
   background: white;
