@@ -1,0 +1,96 @@
+ja:
+  home:
+    stamp_samples:
+      title: "スタンプサンプル — Ruby Passport"
+      heading: "スタンプサンプル"
+      subtitle: "世界中のRubyイベントのスタンプからインスピレーションを得ましょう。これらの例は、イベントスタンプで実現できるクリエイティビティと多様性を示しています。"
+      stamps:
+        ruby_30:
+          alt: "Ruby 30 スタンプ"
+          title: "Ruby 30"
+          description: "Rubyロゴを使ったクラシックな円形デザイン"
+        paris_rb:
+          alt: "Paris.rb スタンプ"
+          title: "Paris.rb"
+          description: "イベントブランディングを活かしたエレガントなデザイン"
+        munich_rubyshift:
+          alt: "Munich Rubyshift スタンプ"
+          title: "Munich Rubyshift"
+          description: "イベント名を際立たせた大胆なデザイン"
+        hamburg_on_ruby:
+          alt: "Hamburg on Ruby スタンプ"
+          title: "Hamburg on Ruby"
+          description: "開催地を強調したクリーンなデザイン"
+        plrug:
+          alt: "PLRUG スタンプ"
+          title: "PLRUG"
+          description: "ポーランドRubyユーザーグループのスタンプ"
+        event_stamp:
+          alt: "イベントスタンプの例"
+          title: "イベントスタンプ"
+          description: "カスタムイベントスタンプの例"
+        stamping_in_action:
+          alt: "スタンプ押印の様子"
+          title: "スタンプの実演"
+          description: "実際のスタンプ押印の様子"
+        custom_design:
+          alt: "カスタムスタンプデザイン"
+          title: "カスタムデザイン"
+          description: "クリエイティブなスタンプデザインの例"
+        compact_design:
+          alt: "小型スタンプの例"
+          title: "コンパクトデザイン"
+          description: "小さめフォーマットのスタンプの例"
+        stamping_setup:
+          alt: "イベントスタンプ押印のセットアップ"
+          title: "スタンプセットアップ"
+          description: "Ruby Passportのスタンプ押印の準備が整ったテーブル。"
+        stamped_page:
+          alt: "スタンプが押されたRuby Passportのページ"
+          title: "スタンプ済みページ"
+          description: "イベントスタンプで埋まったRuby Passportのページ。"
+        stamp_closeup:
+          alt: "スタンプ印影のクローズアップ"
+          title: "スタンプのクローズアップ"
+          description: "くっきりとしたスタンプ印影の詳細ビュー。"
+        happy_attendees:
+          alt: "Ruby Passportを持つ参加者"
+          title: "笑顔の参加者"
+          description: "スタンプが押されたRuby Passportを見せる参加者。"
+        stamp_in_motion:
+          alt: "スタンプ押印の動画"
+          title: "スタンプの実演動画"
+          description: "Ruby Passportのスタンプを使用する短い動画。"
+        stamping_demo:
+          alt: "スタンプ押印デモ動画"
+          title: "スタンプデモ"
+          description: "イベントでのスタンプ押印プロセスのデモンストレーション。"
+        closeup_stamp:
+          alt: "スタンプのクローズアップ動画"
+          title: "クローズアップスタンプ"
+          description: "Rubyテーマのスタンプ印影のクローズアップ映像。"
+        stamping_table:
+          alt: "スタンプテーブルの動画"
+          title: "スタンプテーブル"
+          description: "Rubyイベントでのスタンプステーションのセットアップ。"
+        passport_in_use:
+          alt: "パスポート使用中の動画"
+          title: "パスポート使用中"
+          description: "Ruby Passportにスタンプを押してもらう参加者。"
+        stamping_flow:
+          alt: "スタンプ押印フロー動画"
+          title: "スタンプの流れ"
+          description: "カンファレンスの休憩中のスムーズなスタンプ押印の流れ。"
+      inspiration:
+        heading: "スタンプを自由にデザインしよう"
+        description: "これらの例は、実現可能なデザインの多様性を示しています。シンプルでも凝ったものでも、カラフルでもモノクロでも、円形でもオリジナルの形でも。限界はあなたの想像力だけです！"
+        design_tips_heading: "デザインのヒント："
+        tip_event_name: "イベント名と開催年を入れる"
+        tip_logo: "ロゴやRubyテーマのアイコンを入れる"
+        tip_dual_color: "視覚的なインパクトを出すために2色デザインを検討する"
+        tip_unique: "イベントの個性を反映したデザインにする"
+        tip_test: "イベント前に紙でスタンプをテストする"
+        organizer_guide: "主催者ガイドを見る"
+      footer:
+        back_to_home: "← ホームに戻る"
+        made_with_love: "Rubyコミュニティへ ❤️ を込めて"

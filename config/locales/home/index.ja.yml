@@ -1,0 +1,42 @@
+ja:
+  home:
+    index:
+      title: "The Ruby Passport — Rubyイベントの思い出を集めよう"
+      hero:
+        passport_alt: "The Ruby Passport"
+        heading: "The Ruby Passport"
+        tagline: "参加したRubyイベントのスタンプや思い出を集められる、リアルなメモラビリアです。"
+        status_label: "現在の状況："
+        status_message: "1月に追加のバッチ（1000部）を発注しました。"
+      how_to_use:
+        heading: "パスポートの使い方"
+        step1:
+          title: "パスポートを受け取る"
+          description_html: "パスポートを受け取ったら、QRコードをスキャンするか、表紙の小さなチップをタップして登録してください。<a href=\"https://rubyevents.org\" class=\"text-[#9b1c31] hover:underline font-medium\">rubyevents.org</a>に移動し、アカウントを作成するか、既存のアカウントに紐づけることができます。"
+        step2:
+          title: "情報を記入する"
+          description: "次に、パスポートにあなたの情報を記入しましょう（本名でもニックネームでも構いません、確認はしません）。"
+        step3:
+          title: "写真を追加する"
+          description: "イベントによっては、写真を撮影・印刷できる設備が用意されていることがあります。大使館ブースに行って撮影しましょう。設備がない場合もありますが、それは仕方ありません — イベントの運営は時間もかかりますし、予算の都合もあります。"
+        step4:
+          title: "イベントスタンプを押す"
+          description: "イベントには1つ以上のスタンプが用意されているかもしれません。全部集めましょう！🙌"
+        step5:
+          title: "Ruby Passportをすべてのイベントに持っていこう"
+          description: "すべてのイベントに独自のスタンプやサプライズが用意されているので、必ず持参しましょう。さらに、友達とつながるきっかけにもなるかもしれません。"
+      organizer:
+        heading: "イベント主催者の方へ"
+        description: "あなたのイベントでRuby Passport体験を実現するために必要なすべてが揃っています。"
+        cta: "Ruby Passport（主催者ガイド）"
+      events:
+        heading: "参加イベント"
+        your_event: "✨ あなたのイベントもここに"
+      sponsors:
+        brought_to_you: "✨ 提供"
+        avo_alt: "Avo"
+        avo_title: "強力な管理画面を構築するためのRuby on Railsフレームワーク"
+        ruby_events_alt: "RubyEvents.org"
+        ruby_events_title: "すべてのRubyイベントを網羅することをミッションに"
+      footer:
+        made_with_love: "Rubyコミュニティへ ❤️ を込めて"
