@@ -42,6 +42,15 @@ bun run build:css           # CSS via Tailwind CLI
 - **Models**: User and Session (standard Rails auth models).
 - **Routes**: Root is `home#index`. Public pages: `/organizer`, `/stamp-samples`. Session/password resources for auth. Avo admin mounted.
 
+## Stamp Samples Gallery
+
+The stamp samples page (`/stamp-samples`) displays images in **reverse-chronological order** — newest stamps go first, like a feed. When adding new stamp images:
+
+1. Drop the image files into `app/assets/images/samples/`
+2. Run `bin/compress-samples` to compress them (requires ImageMagick and ffmpeg)
+3. Add locale entries in `config/locales/home/stamp_samples.en.yml`
+4. Add the card markup at the **top** of the grid in `app/views/home/stamp_samples.html.erb`
+
 ## Design Guidelines
 
 See `agents.md` for the full design style guide. Key points:

@@ -41,6 +41,22 @@ en:
           alt: "Small stamp example"
           title: "Compact Design"
           description: "Smaller format stamp example"
+        ruby_zg:
+          alt: "Ruby ZG stamp"
+          title: "Ruby ZG"
+          description: "Zagreb's Ruby community stamp"
+        blue_ridge_ruby:
+          alt: "Blue Ridge Ruby stamp"
+          title: "Blue Ridge Ruby"
+          description: "Blue Ridge Ruby conference stamp design"
+        blue_ridge_ruby_passport:
+          alt: "Blue Ridge Ruby passport stamp"
+          title: "Blue Ridge Ruby Passport"
+          description: "Blue Ridge Ruby stamp on a Ruby Passport page"
+        krug:
+          alt: "KRUG stamp"
+          title: "KRUG"
+          description: "Kraków Ruby User Group stamp"
         stamping_setup:
           alt: "Event stamping setup"
           title: "Stamping Setup"

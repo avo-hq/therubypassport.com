@@ -1,0 +1,90 @@
+#!/bin/bash
+set -e
+
+DIR="$(dirname "$0")/../app/assets/images/samples"
+MARKER="$DIR/.compressed"
+MAX_WIDTH=1200
+QUALITY=80
+
+# Size thresholds — skip files already small enough
+IMAGE_THRESHOLD=300000  # 300KB
+VIDEO_THRESHOLD=3000000 # 3MB
+
+echo "=== Compressing stamp sample images ==="
+echo ""
+
+# Touch marker file if it doesn't exist
+[ -f "$MARKER" ] || touch -t 197001010000 "$MARKER"
+
+skipped=0
+compressed=0
+
+# Images (jpg, jpeg, png)
+for file in "$DIR"/*.{jpg,jpeg,png}; do
+  [ -f "$file" ] || continue
+
+  # Skip if file hasn't been modified since last compression run
+  if [ "$file" -ot "$MARKER" ]; then
+    skipped=$((skipped + 1))
+    continue
+  fi
+
+  original_size=$(stat -f%z "$file")
+
+  # Skip if already under threshold
+  if [ "$original_size" -lt "$IMAGE_THRESHOLD" ]; then
+    echo "Skipping $(basename "$file") ($(ls -lh "$file" | awk '{print $5}') — already small)"
+    skipped=$((skipped + 1))
+    continue
+  fi
+
+  original_human=$(ls -lh "$file" | awk '{print $5}')
+  echo -n "Compressing $(basename "$file") ($original_human) ... "
+
+  magick "$file" -resize "${MAX_WIDTH}x${MAX_WIDTH}>" -quality $QUALITY -strip "$file"
+
+  new_size=$(stat -f%z "$file")
+  new_human=$(ls -lh "$file" | awk '{print $5}')
+  savings=$(( (original_size - new_size) * 100 / original_size ))
+  echo "$new_human (${savings}% smaller)"
+  compressed=$((compressed + 1))
+done
+
+# Videos (.mov -> compressed .mov with H.264)
+for file in "$DIR"/*.mov; do
+  [ -f "$file" ] || continue
+
+  if [ "$file" -ot "$MARKER" ]; then
+    skipped=$((skipped + 1))
+    continue
+  fi
+
+  original_size=$(stat -f%z "$file")
+
+  if [ "$original_size" -lt "$VIDEO_THRESHOLD" ]; then
+    echo "Skipping $(basename "$file") ($(ls -lh "$file" | awk '{print $5}') — already small)"
+    skipped=$((skipped + 1))
+    continue
+  fi
+
+  original_human=$(ls -lh "$file" | awk '{print $5}')
+  echo -n "Compressing $(basename "$file") ($original_human) ... "
+
+  tmpfile="${file}.tmp.mov"
+  ffmpeg -y -i "$file" -vcodec libx264 -crf 28 -preset medium -vf "scale='min(720,iw)':-2" -an "$tmpfile" 2>/dev/null
+
+  mv "$tmpfile" "$file"
+
+  new_size=$(stat -f%z "$file")
+  new_human=$(ls -lh "$file" | awk '{print $5}')
+  savings=$(( (original_size - new_size) * 100 / original_size ))
+  echo "$new_human (${savings}% smaller)"
+  compressed=$((compressed + 1))
+done
+
+# Update marker timestamp
+touch "$MARKER"
+
+echo ""
+echo "=== Done === ($compressed compressed, $skipped skipped)"
+echo "Total size: $(du -sh "$DIR" | awk '{print $1}')"
