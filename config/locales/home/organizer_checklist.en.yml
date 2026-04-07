@@ -1,8 +1,8 @@
 en:
   home:
     organizer_checklist:
-      title: "Ruby Passport — Event Day Checklist"
-      heading: "Event Day Checklist"
+      title: "Ruby Passport — Embassy Checklist"
+      heading: "Embassy Checklist"
       subtitle: "Everything you need to run the Ruby Passport experience at your event."
       progress_label: "Progress"
       progress_template: "%{checked} of %{total} completed"
@@ -47,7 +47,7 @@ en:
       mc_script:
         heading: "MC announcement script"
         description: "Use this during the opening to let everyone know about the Ruby Passport."
-        script_html: '"If you picked up a little burgundy booklet at registration — that''s your Ruby Passport! It''s a real passport-style booklet where you collect stamps from Ruby events around the world.<br><br>Here''s what to do: fill in your name on the first page, then head over to our Embassy desk <span class="font-semibold">[point to location]</span> to get your event stamp, have your photo taken, and scan the QR code to claim it digitally.<br><br>If you already have a passport from a previous event — bring it to the Embassy to collect this event''s stamp!"'
+        script_html: '"If you picked up a little burgundy booklet at registration — that''s your Ruby Passport! It''s a real passport-style booklet where you collect stamps from Ruby events around the world.<br><br>Here''s what to do: fill in your name on the first page, then head over to our Embassy desk <span class="font-semibold">[point to location]</span> to get your event stamp, have your photo taken, and scan the QR code to claim it digitally.<br><br>If you already have a passport from a previous event — bring it to the Embassy to collect this event''s stamp! These passports are brought to you by the folks at Avo, who''ve made it possible to enjoy this at Ruby events all over the world."'
       checklist:
         pre_newsletter: "Send attendees a newsletter reminder to bring their passports"
         pre_stamp: "Confirm your event stamp is ready (name, logo, date)"
