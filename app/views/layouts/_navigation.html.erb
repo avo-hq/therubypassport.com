@@ -17,6 +17,8 @@
             class: "nav-link #{current_page?(organizer_path) ? 'nav-link-active' : ''}" %>
         <%= link_to t("layouts.navigation.stamp_samples"), stamp_samples_path,
             class: "nav-link #{current_page?(stamp_samples_path) ? 'nav-link-active' : ''}" %>
+        <%= link_to t("layouts.navigation.join"), join_path,
+            class: "inline-flex items-center gap-1 px-4 py-2 bg-[#9b1c31] text-white text-sm font-semibold rounded-lg hover:bg-[#7a1627] transition-colors" %>
 
         <% if params.key?(:locale) || controller_name == "home" %>
           <span class="text-slate-300">|</span>
@@ -56,6 +58,8 @@
             class: "nav-link-mobile #{current_page?(organizer_path) ? 'nav-link-active' : ''}" %>
         <%= link_to t("layouts.navigation.stamp_samples"), stamp_samples_path,
             class: "nav-link-mobile #{current_page?(stamp_samples_path) ? 'nav-link-active' : ''}" %>
+        <%= link_to t("layouts.navigation.join"), join_path,
+            class: "nav-link-mobile font-semibold text-[#9b1c31]" %>
 
         <% if params.key?(:locale) || controller_name == "home" %>
           <div class="flex items-center gap-2 px-3 pt-2 border-t border-slate-200 mt-2">

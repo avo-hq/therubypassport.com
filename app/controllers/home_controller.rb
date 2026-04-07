@@ -15,4 +15,7 @@ class HomeController < ApplicationController
 
   def embassy_instructions
   end
+
+  def join
+  end
 end

@@ -5,8 +5,18 @@
         ← <%= back_label %>
       </a>
     <% end %>
-    <p class="text-slate-400">
+    <p class="text-slate-400 mb-4">
       <%= t("layouts.footer.made_with_love") %>
     </p>
+    <div class="flex items-center justify-center gap-3 text-slate-500 text-sm">
+      <span><%= t("layouts.footer.brought_to_you") %></span>
+      <a href="https://rubyevents.org" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+        <img src="<%= asset_path "ruby-events-logo.png" %>" alt="RubyEvents.org" class="h-6">
+      </a>
+      <span>&</span>
+      <a href="https://avohq.io" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+        <img src="<%= asset_path "avo-logo.png" %>" alt="Avo" class="h-6">
+      </a>
+    </div>
   </div>
 </footer>

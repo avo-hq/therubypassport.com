@@ -5,6 +5,7 @@ en:
       heading: "Embassy Worker Instructions"
       subtitle: "The Ruby Embassy"
       intro: "Welcome to the team! You're the friendly face helping attendees get their Ruby Passport set up. This sheet covers everything you need to know."
+      print_tip: "Organizers — print this page and hand a copy to each embassy worker so they have it at the desk for quick reference."
 
       steps:
         heading: "The process, step by step"
@@ -54,4 +55,5 @@ en:
         email: "adrian@adrian.com"
         subject_hint: "Put \"Ruby Embassy — Urgent\" in the subject line so it gets noticed quickly."
 
-      print_note: "Print this page and keep it at the Embassy desk for quick reference."
+      print_note: "The Ruby Passport — made possible by Avo"
+      print_note_url: "therubypassport.com"

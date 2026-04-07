@@ -3,6 +3,11 @@
 <!-- Print-optimized standalone page -->
 <div class="max-w-3xl mx-auto px-6 py-12 print:px-4 print:py-4">
 
+  <!-- Print tip (screen only) -->
+  <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 print:hidden">
+    <p class="text-blue-800 text-sm font-medium"><%= t('.print_tip') %></p>
+  </div>
+
   <!-- Header -->
   <header class="text-center mb-12 print:mb-6">
     <p class="text-sm font-semibold tracking-widest uppercase text-[#9b1c31] mb-2"><%= t('.subtitle') %></p>
@@ -85,15 +90,21 @@
     </div>
   </section>
 
-  <!-- Print footer note -->
-  <footer class="text-center text-sm text-slate-400 border-t border-slate-200 pt-6 print:pt-3">
-    <p><%= t('.print_note') %></p>
+  <!-- Print footer with branding -->
+  <footer class="border-t border-slate-200 pt-6 print:pt-4 mt-12 print:mt-6">
+    <div class="flex flex-col items-center gap-3">
+      <div class="flex items-center gap-3">
+        <img src="<%= asset_path "avo-logo.png" %>" alt="Avo" class="h-6">
+      </div>
+      <p class="text-sm text-slate-400"><%= t('.print_note') %></p>
+      <p class="text-xs text-slate-300"><%= t('.print_note_url') %></p>
+    </div>
   </footer>
 
   <!-- Print button (hidden in print) -->
   <div class="text-center mt-8 print:hidden">
     <button onclick="window.print()" class="btn-primary cursor-pointer">
-      <span>🖨</span> Print this page
+      <span>🖨</span> Print these instructions
     </button>
     <a href="<%= organizer_path %>" class="inline-flex items-center gap-2 px-5 py-3 ml-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-all">
       ← Back to organizer guide

@@ -5,7 +5,9 @@ en:
       home: "Home"
       organizer_guide: "Organizer's Guide"
       stamp_samples: "Stamp Samples"
+      join: "Get the Passport"
     footer:
       made_with_love: "Made with ❤️ for the Ruby community"
+      brought_to_you: "Proudly brought to you by"
       back_to_home: "Back to home"
       back_to_organizer: "Back to Organizer's Guide"
