@@ -20,6 +20,10 @@
   --wide-content-width: 1200px;
 }
 
+body {
+  background-color: #f3f4f6;
+}
+
 /* Holographic Card Effect */
 .holographic-card {
   transition: transform 0.15s ease-out;

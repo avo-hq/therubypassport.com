@@ -1,0 +1,104 @@
+<% content_for(:title) { t('.title') } %>
+
+<!-- Print-optimized standalone page -->
+<div class="max-w-3xl mx-auto px-6 py-12 print:px-4 print:py-4">
+
+  <!-- Header -->
+  <header class="text-center mb-12 print:mb-6">
+    <p class="text-sm font-semibold tracking-widest uppercase text-[#9b1c31] mb-2"><%= t('.subtitle') %></p>
+    <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3 print:text-2xl"><%= t('.heading') %></h1>
+    <p class="text-lg text-slate-600 leading-relaxed print:text-base"><%= t('.intro') %></p>
+  </header>
+
+  <!-- Step by step process -->
+  <section class="mb-12 print:mb-6">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6 print:text-xl print:mb-4"><%= t('.steps.heading') %></h2>
+
+    <ol class="space-y-4 print:space-y-2">
+      <% (1..5).each do |i| %>
+        <li class="flex gap-4 items-start bg-white rounded-lg p-5 shadow-sm border border-slate-100 print:p-3 print:shadow-none print:border-slate-200">
+          <span class="step-number shrink-0 print:w-8 print:h-8 print:text-sm"><%= i %></span>
+          <div>
+            <span class="font-semibold text-slate-800"><%= t(".steps.step#{i}_title") %></span>
+            <p class="text-slate-600 mt-1 print:mt-0"><%== I18n.exists?("home.embassy_instructions.steps.step#{i}_detail_html") ? t(".steps.step#{i}_detail_html") : t(".steps.step#{i}_detail") %></p>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+  </section>
+
+  <!-- Scanner app instructions -->
+  <section class="mb-12 print:mb-6">
+    <div class="bg-amber-50 rounded-lg p-6 border border-amber-200 print:p-4">
+      <h2 class="text-xl font-bold text-amber-900 mb-4 print:text-lg print:mb-2"><%= t('.scanner.heading') %></h2>
+
+      <ol class="space-y-2 text-amber-800">
+        <% (1..5).each do |i| %>
+          <li class="flex gap-3 items-start">
+            <span class="font-bold text-amber-600 shrink-0"><%= i %>.</span>
+            <span><%== t(".scanner.step#{i}") %></span>
+          </li>
+        <% end %>
+      </ol>
+
+      <p class="mt-4 text-sm font-medium text-amber-700 border-t border-amber-200 pt-3"><%= t('.scanner.tip') %></p>
+    </div>
+  </section>
+
+  <!-- What to tell the passport holder -->
+  <section class="mb-12 print:mb-6">
+    <h2 class="text-2xl font-bold text-slate-800 mb-4 print:text-xl print:mb-3"><%= t('.tell_holder.heading') %></h2>
+
+    <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 print:p-4">
+      <ul class="space-y-3 text-slate-700">
+        <% (1..4).each do |i| %>
+          <li class="flex gap-3 items-start">
+            <span class="text-[#9b1c31] font-bold shrink-0">&bull;</span>
+            <span><%= t(".tell_holder.point#{i}") %></span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mb-12 print:mb-6 print:break-before-page">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6 print:text-xl print:mb-4"><%= t('.faq.heading') %></h2>
+
+    <div class="space-y-5 print:space-y-3">
+      <% (1..5).each do |i| %>
+        <div>
+          <h3 class="font-semibold text-slate-800 mb-1"><%= t(".faq.q#{i}") %></h3>
+          <p class="text-slate-600 leading-relaxed print:text-sm"><%= t(".faq.a#{i}") %></p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <!-- Need help? -->
+  <section class="mb-12 print:mb-6">
+    <div class="bg-red-50 rounded-lg p-6 border border-red-200 print:p-4">
+      <h2 class="text-xl font-bold text-[#9b1c31] mb-2 print:text-lg"><%= t('.need_help.heading') %></h2>
+      <p class="text-slate-700 mb-3"><%= t('.need_help.description') %></p>
+      <a href="mailto:<%= t('.need_help.email') %>?subject=Ruby%20Embassy%20%E2%80%94%20Urgent" class="text-lg font-semibold text-[#9b1c31] hover:underline"><%= t('.need_help.email') %></a>
+      <p class="text-sm text-slate-500 mt-2"><%= t('.need_help.subject_hint') %></p>
+    </div>
+  </section>
+
+  <!-- Print footer note -->
+  <footer class="text-center text-sm text-slate-400 border-t border-slate-200 pt-6 print:pt-3">
+    <p><%= t('.print_note') %></p>
+  </footer>
+
+  <!-- Print button (hidden in print) -->
+  <div class="text-center mt-8 print:hidden">
+    <button onclick="window.print()" class="btn-primary cursor-pointer">
+      <span>🖨</span> Print this page
+    </button>
+    <a href="<%= organizer_path %>" class="inline-flex items-center gap-2 px-5 py-3 ml-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-all">
+      ← Back to organizer guide
+    </a>
+  </div>
+</div>
+
+<%= render "layouts/footer", back_path: organizer_path, back_label: t("layouts.footer.back_to_organizer"), print_hidden: true %>

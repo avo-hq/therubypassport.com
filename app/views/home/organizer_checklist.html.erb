@@ -117,7 +117,12 @@
 <section class="section-alternate py-12 px-6 print:py-6 print:bg-white print:break-before-page">
   <div class="max-w-3xl mx-auto">
     <h2 class="text-2xl font-bold text-slate-800 mb-2"><%= t('.embassy_reference.heading') %></h2>
-    <p class="text-slate-500 mb-6 print:mb-4"><%= t('.embassy_reference.description') %></p>
+    <p class="text-slate-500 mb-4 print:mb-4"><%= t('.embassy_reference.description') %></p>
+
+    <a href="<%= embassy_instructions_path %>" class="inline-flex items-center gap-2 text-[#9b1c31] hover:underline font-medium mb-6 print:hidden" target="_blank">
+      <span>🖨</span>
+      <span><%= t('.embassy_reference.printable_link') %></span>
+    </a>
 
     <div class="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#9b1c31] print:shadow-none print:border print:border-slate-300">
       <h3 class="text-xl font-semibold text-slate-800 mb-4"><%= t('.embassy_reference.role_heading') %></h3>
@@ -165,6 +170,18 @@
           <%= t('.embassy_reference.scanner_instructions_html').html_safe %>
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Need Help? -->
+<section class="py-12 px-6 bg-white print:py-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="bg-red-50 rounded-lg p-6 border border-red-200 print:p-4">
+      <h2 class="text-xl font-bold text-[#9b1c31] mb-2"><%= t('.need_help.heading') %></h2>
+      <p class="text-slate-700 mb-3"><%= t('.need_help.description') %></p>
+      <a href="mailto:<%= t('.need_help.email') %>?subject=Ruby%20Embassy%20%E2%80%94%20Urgent" class="text-lg font-semibold text-[#9b1c31] hover:underline"><%= t('.need_help.email') %></a>
+      <p class="text-sm text-slate-500 mt-2"><%= t('.need_help.subject_hint') %></p>
     </div>
   </div>
 </section>

@@ -37,11 +37,11 @@ ja:
         step5_title: "写真撮影"
         step5_detail: "— 顔写真を撮り、印刷し、パスポートに貼る手伝いをします。"
         scanner_heading: "スキャナーアプリへのアクセス"
-        scanner_instructions_html: "スマートフォンで<span class=\"font-mono font-semibold\">passport-scanner.avohq.io</span>を開いてください。ログイン情報は主催者から提供されます。イベント開始前にログインできることを確認してください。"
+        scanner_instructions_html: 'スマートフォンで<span class="font-mono font-semibold">https://passport-scanner.avohq.io</span>を開いてください。ログイン情報は主催者から提供されます。イベント開始前にログインできることを確認してください。'
       mc_script:
         heading: "MC用アナウンス原稿"
         description: "オープニングで、参加者にRuby Passportについて案内するために使ってください。"
-        script_html: "「受付でワインレッドの小さな冊子を受け取った方 — それがRuby Passportです！世界中のRubyイベントのスタンプを集められる、本物のパスポート風の冊子です。<br><br>やることは簡単です：最初のページに名前を記入して、大使館デスク<span class=\"font-semibold\">【場所を指さす】</span>に行ってイベントスタンプをもらい、写真を撮って、QRコードをスキャンしてデジタル登録してください。<br><br>前回のイベントでパスポートをもらった方は — 大使館に持っていって今回のスタンプを集めましょう！」"
+        script_html: '「受付でワインレッドの小さな冊子を受け取った方 — それがRuby Passportです！世界中のRubyイベントのスタンプを集められる、本物のパスポート風の冊子です。<br><br>やることは簡単です：最初のページに名前を記入して、大使館デスク<span class="font-semibold">【場所を指さす】</span>に行ってイベントスタンプをもらい、写真を撮って、QRコードをスキャンしてデジタル登録してください。<br><br>前回のイベントでパスポートをもらった方は — 大使館に持っていって今回のスタンプを集めましょう！」'
       checklist:
         pre_newsletter: "参加者にパスポート持参のニュースレターリマインダーを送る"
         pre_stamp: "イベントスタンプの準備を確認する（名前、ロゴ、日付）"

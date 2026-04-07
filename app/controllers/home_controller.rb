@@ -12,4 +12,7 @@ class HomeController < ApplicationController
 
   def stamp_samples
   end
+
+  def embassy_instructions
+  end
 end

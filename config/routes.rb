@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "organizer", to: "home#organizer", as: :organizer
     get "organizer/checklist", to: "home#organizer_checklist", as: :organizer_checklist
     get "stamp-samples", to: "home#stamp_samples", as: :stamp_samples
+    get "embassy-instructions", to: "home#embassy_instructions", as: :embassy_instructions
   end
 
   mount_avo

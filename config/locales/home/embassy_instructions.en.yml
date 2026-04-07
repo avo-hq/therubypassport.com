@@ -1,0 +1,57 @@
+en:
+  home:
+    embassy_instructions:
+      title: "Ruby Passport — Embassy Worker Instructions"
+      heading: "Embassy Worker Instructions"
+      subtitle: "The Ruby Embassy"
+      intro: "Welcome to the team! You're the friendly face helping attendees get their Ruby Passport set up. This sheet covers everything you need to know."
+
+      steps:
+        heading: "The process, step by step"
+        step1_title: "Do they have a passport?"
+        step1_detail: "If the attendee doesn't have a Ruby Passport yet, hand them one from the stack. Everyone should get one."
+        step2_title: "Scan their passport"
+        step2_detail_html: 'Use the <a href="https://passport-scanner.avohq.io" target="_blank" class="text-[#9b1c31] underline font-medium">passport-scanner app</a> on your phone to scan the QR code inside their passport. This registers their verified attendance at this event. Get the event name and access code from your conference organizer before the event starts.'
+        step3_title: "Stamp the passport"
+        step3_detail: "Place the event stamp on the next available stamp page. Press firmly and evenly — one clean stamp."
+        step4_title: "Ask them to scan it themselves"
+        step4_detail: "Have the passport holder scan their own QR code with their phone camera. This links the passport to their profile on rubyevents.org."
+        step5_title: "Photo time"
+        step5_detail: "Send them to the photo station to get their headshot taken — or help them print their photo and stick it on the passport's photo page."
+
+      scanner:
+        heading: "How to use the QR scanner app"
+        step1: 'Go to <a href="https://passport-scanner.avohq.io" target="_blank">https://passport-scanner.avohq.io</a> on your phone'
+        step2: "Enter the event name and password (Adrian will provide these)"
+        step3: "Tap the QR scanner button"
+        step4: "Flip to the rear camera and scan the passport's QR code"
+        step5: "You'll see a confirmation when the scan is successful"
+        tip: "Test this before the event starts to make sure it works on your phone."
+
+      tell_holder:
+        heading: "What to tell the passport holder"
+        point1: "Fill in your details — name, date of issue, and the event name on the first page."
+        point2: "Scan the QR code with your phone — this creates your profile on rubyevents.org."
+        point3: "Get your photo taken and add it to the passport."
+        point4: "Bring your passport to other Ruby events and meetups to collect more stamps!"
+
+      faq:
+        heading: "FAQ"
+        q1: "Why do I need to scan their passport?"
+        a1: "When you scan it, the passport holder gets verified attendance at this event. Think of it as the official immigration stamp — digital proof they were here."
+        q2: "Why does the passport holder need to scan it themselves?"
+        a2: "So they can register on rubyevents.org and get a profile there. The passport becomes the connection to that digital profile — their Ruby community identity."
+        q3: "What if someone already has a passport from a previous event?"
+        a3: "Great! Just scan it, stamp it, and send them to get their photo if they don't have one yet. No need for a new passport."
+        q4: "What if the scanner app isn't working?"
+        a4: "First check your internet connection. If it's still not working, stamp the passport anyway and let Adrian know. The stamp is the most important part."
+        q5: "What if we run out of passports?"
+        a5: "Let the organizer know immediately. In the meantime, you can still help existing passport holders get stamped and scanned."
+
+      need_help:
+        heading: "Need help?"
+        description: "If something isn't working or you run into a problem you can't solve, email Adrian."
+        email: "adrian@adrian.com"
+        subject_hint: "Put \"Ruby Embassy — Urgent\" in the subject line so it gets noticed quickly."
+
+      print_note: "Print this page and keep it at the Embassy desk for quick reference."

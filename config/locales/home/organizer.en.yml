@@ -10,6 +10,8 @@ en:
         nav_faq: "FAQ"
         nav_what_to_do: "What to do"
         nav_how_to_get: "How to get Passports"
+        nav_checklist: "Event Day Checklist"
+        nav_embassy_instructions: "Embassy Instructions"
       intro:
         paragraph_1: "The Ruby Passport is a fun way that event organizers in our space can work together to create an ongoing experience for the Ruby community as they travel from event to event around the world."
         paragraph_2: "The idea: a realistic passport where attendees collect stamps from Ruby events they have been to."
