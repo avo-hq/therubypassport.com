@@ -5,6 +5,10 @@ en:
       heading: "Stamp Samples"
       subtitle: "Get inspired by stamps from Ruby events around the world. These examples show the creativity and variety possible with event stamps."
       stamps:
+        blastoff_rails:
+          alt: "BlastOff Rails 2026 stamp in a Ruby Passport"
+          title: "BlastOff Rails"
+          description: "Rocket launch design stamped in a Ruby Passport"
         ruby_30:
           alt: "Ruby 30 stamp"
           title: "Ruby 30"
