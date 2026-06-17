@@ -5,7 +5,7 @@ ja:
       hero:
         passport_alt: "The Ruby Passport"
         heading: "The Ruby Passport"
-        tagline: "参加したRubyイベントのスタンプや思い出を集められる、リアルなメモラビリアです。"
+        tagline: "参加したRubyイベントのスタンプや思い出を集められる、リアルな記念品です。"
         status_label: "現在の状況："
         status_message: "最新のバッチが届き、注文総数は5000部を超えました。"
       how_to_use:
